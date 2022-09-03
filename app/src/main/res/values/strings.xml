@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Yatra</string>
     <string name="__p__sign_in_string">SIGN IN</string>
+    <string name="__p__sign_up_string">SIGN UP</string>
 </resources>
