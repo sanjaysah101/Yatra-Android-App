@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.181" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/drawable/ic_launcher_background.xml" value="0.181" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/font/verdana.xml" value="0.26145833333333335" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_main.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_sign_in.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.181" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.104" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
