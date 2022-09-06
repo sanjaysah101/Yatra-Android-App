@@ -26,41 +26,72 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/userEmail"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="20dp"
-            android:background="#D9D9D9"
-            android:drawableEnd="@drawable/ic_baseline_email_24"
-            android:drawablePadding="20dp"
-            android:hint="email"
-            android:padding="20dp"
-            android:textColorHint="@color/lightWhite"
-            android:textSize="24sp"
+            android:id="@+id/t1"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            app:errorEnabled="true"
+            app:errorContentDescription="invalid email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/__p__sign_in" />
+            app:layout_constraintTop_toBottomOf="@+id/__p__sign_in"
 
-        <EditText
-            android:id="@+id/password"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textEmailAddress"
+                tools:layout_editor_absoluteX="2dp"
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="20dp"
+                android:background="#D9D9D9"
+                android:drawablePadding="20dp"
+                android:hint="Email"
+                android:padding="20dp"
+                android:textColorHint="@color/lightWhite"
+                android:textSize="24sp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="#D9D9D9"
-            android:drawableEnd="@drawable/ic_baseline_lock_24"
-            android:drawablePadding="20dp"
-            android:hint="password"
-            android:padding="20dp"
-            android:textColorHint="@color/lightWhite"
-            android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/userEmail"
-            tools:layout_editor_absoluteX="2dp" />
+            android:id="@+id/t2"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="true"
+            app:errorContentDescription="invalid password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t1"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textPassword"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#D9D9D9"
+                android:drawablePadding="20dp"
+                android:hint="Password"
+                android:padding="20dp"
+                android:textColorHint="@color/lightWhite"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="2dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
         <CheckBox
             android:id="@+id/c"
@@ -75,7 +106,7 @@
             android:textColorHint="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+            app:layout_constraintTop_toBottomOf="@+id/t2" />
 
         <TextView
             android:id="@+id/forgetpass"
@@ -98,7 +129,7 @@
             android:layout_marginTop="24dp"
             android:width="150dp"
             android:height="60dp"
-            android:backgroundTint="#F55D1C"
+            android:backgroundTint="@color/primary"
             android:text="SIGN IN"
             android:textSize="20sp"
             android:textStyle="bold"
