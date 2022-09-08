@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -19,15 +18,23 @@ public class SignInActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        TextView signUpTextBtn;
+        TextView signUpTextBtn, forgetpass;
         signUpTextBtn = findViewById(R.id.signUpTextBtn);
+        forgetpass = findViewById(R.id.forgetpass);
         Intent signUpIntent = new Intent(this, SignupActivity.class);
+        Intent forgetIntent = new Intent(this, ForgetPasswordActivity.class);
 
 
         signUpTextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(signUpIntent);
+            }
+        });
+        forgetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(forgetIntent);
             }
         });
     }
