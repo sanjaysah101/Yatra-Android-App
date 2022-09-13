@@ -32,6 +32,7 @@
         android:layout_height="wrap_content"
         app:errorContentDescription="invalid email"
         app:errorEnabled="true"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -220,7 +221,7 @@
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:id="@+id/comfirmPassword"
+          android:id="@+id/confirmPassword"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginStart="20dp"
@@ -228,7 +229,7 @@
           android:layout_marginEnd="20dp"
           android:background="#D9D9D9"
           android:drawablePadding="20dp"
-          android:hint="Password"
+          android:hint="Confirm Password"
           android:inputType="textPassword"
           android:padding="20dp"
           android:textColorHint="@color/lightWhite"
@@ -303,7 +304,7 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

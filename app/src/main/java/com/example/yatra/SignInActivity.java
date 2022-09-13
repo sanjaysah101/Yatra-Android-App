@@ -18,23 +18,24 @@ public class SignInActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        TextView signUpTextBtn, forgetpass;
-        signUpTextBtn = findViewById(R.id.signUpTextBtn);
+        TextView signUpText, forgetpass;
+        signUpText = findViewById(R.id.textViewSignUp);
         forgetpass = findViewById(R.id.textViewForgetPassword);
         Intent signUpIntent = new Intent(this, SignupActivity.class);
         Intent forgetIntent = new Intent(this, ForgetPasswordActivity.class);
 
 
-        signUpTextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(signUpIntent);
-            }
-        });
+
         forgetpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(forgetIntent);
+            }
+        });
+        signUpText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(signUpIntent);
             }
         });
     }
