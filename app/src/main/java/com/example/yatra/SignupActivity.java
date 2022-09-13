@@ -36,6 +36,10 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         mAuth = FirebaseAuth.getInstance();
+        if(mAuth.getCurrentUser() != null){
+            finish();
+            return;
+        }
         Objects.requireNonNull(getSupportActionBar()).hide(); //Hide Title Bar
 
         TextView signInTextBtn;
@@ -116,19 +120,21 @@ public class SignupActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     User user = new User(fname, lname, email);
-                    FirebaseDatabase.getInstance().getReference("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance()
+                    FirebaseDatabase.getInstance()
+                            .getReference("Users")
+                            .child(Objects.requireNonNull(FirebaseAuth.getInstance()
                                     .getCurrentUser()).getUid()).setValue(user)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(SignupActivity.this, "User has been register successfully", Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.INVISIBLE);
+                                showDashboard();
                             }
                             else{
                                 Toast.makeText(SignupActivity.this, "Sign Up failed! Try again!", Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.INVISIBLE);
                             }
+                            progressBar.setVisibility(View.INVISIBLE);
                         }
                     });
                 }else{
@@ -146,5 +152,9 @@ public class SignupActivity extends AppCompatActivity {
         });
 
 
+    }
+    private void showDashboard(){
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }
