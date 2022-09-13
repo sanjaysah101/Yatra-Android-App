@@ -20,7 +20,7 @@ public class SignInActivity extends AppCompatActivity {
 
         TextView signUpTextBtn, forgetpass;
         signUpTextBtn = findViewById(R.id.signUpTextBtn);
-        forgetpass = findViewById(R.id.forgetpass);
+        forgetpass = findViewById(R.id.textViewForgetPassword);
         Intent signUpIntent = new Intent(this, SignupActivity.class);
         Intent forgetIntent = new Intent(this, ForgetPasswordActivity.class);
 

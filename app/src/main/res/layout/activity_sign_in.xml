@@ -105,7 +105,7 @@
             app:layout_constraintTop_toBottomOf="@+id/t2" />
 
         <TextView
-            android:id="@+id/forgetpass"
+            android:id="@+id/textViewForgetPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
