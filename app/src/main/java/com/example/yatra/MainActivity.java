@@ -22,7 +22,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //        }, 5000);
         // ------------- Splash Screen Ends --------------
 
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser == null){
             startActivity(new Intent(this, SignInActivity.class));
@@ -62,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 logoutUser();
             }
         });
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference reference = database.getReference("users").child(currentUser.getUid());
 

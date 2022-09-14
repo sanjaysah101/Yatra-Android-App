@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
@@ -89,14 +90,22 @@ public class SignInActivity extends AppCompatActivity {
 
         ProgressBar progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressBar.setVisibility(View.INVISIBLE);
                         if(task.isSuccessful()){
-                            showDashboard();
-                            finish();
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            assert user != null;
+                            if(user.isEmailVerified()){
+                                showDashboard();
+                            }
+                            else{
+                                user.sendEmailVerification();
+                                Toast.makeText(SignInActivity.this, "Check your email to verify your account", Toast.LENGTH_SHORT).show();
+                            }
                         }else{
                             Toast.makeText(SignInActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
                         }
