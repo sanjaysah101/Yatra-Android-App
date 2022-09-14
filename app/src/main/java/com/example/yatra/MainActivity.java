@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.contentcapture.DataRemovalRequest;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -61,9 +62,8 @@ public class MainActivity extends AppCompatActivity {
                 logoutUser();
             }
         });
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference reference = database.getReference("users").child(currentUser.getUid());
+        DatabaseReference reference = database.getReference("Users").child(currentUser.getUid());
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
     }
