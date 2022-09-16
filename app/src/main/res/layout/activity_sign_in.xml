@@ -180,11 +180,11 @@
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
             app:layout_constraintVertical_bias="0.132">
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/google" />
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
 
             <ImageView
                 android:layout_width="48dp"
@@ -192,11 +192,7 @@
                 android:layout_margin="20dp"
                 android:src="@drawable/fb" />
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/twitter" />
+
         </LinearLayout>
 
         <LinearLayout

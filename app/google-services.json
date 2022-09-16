@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "919029241319",
+    "firebase_url": "https://yatra-android-app-default-rtdb.firebaseio.com",
     "project_id": "yatra-android-app",
     "storage_bucket": "yatra-android-app.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "919029241319-5k91ocom2o8iiifr71qpfmqp6f7fh00v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yatra",
+            "certificate_hash": "b1c45717a8fa6f5c2b8e27437fdddfa267659786"
+          }
+        },
         {
           "client_id": "919029241319-tv94a574durdep11a1t5cfg9u7gi6j1q.apps.googleusercontent.com",
           "client_type": 3
