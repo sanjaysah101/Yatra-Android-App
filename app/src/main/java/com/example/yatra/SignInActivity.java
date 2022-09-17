@@ -180,19 +180,22 @@ public class SignInActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(SignInActivity.this, "Successul", Toast.LENGTH_SHORT).show();
                     FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
-                    UpdateUI(firebaseUser);
+//                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                    showDashboard();
+                    UpdateUI();
                 }else{
                     Toast.makeText(SignInActivity.this, "failed", Toast.LENGTH_SHORT).show();
-                    UpdateUI(null);
+                    UpdateUI();
                 }
             }
         });
     }
-    private void UpdateUI(FirebaseUser fUser){
+    private void UpdateUI(){
         GoogleSignInAccount googleSignInAccount = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         if(googleSignInAccount != null){
             String personName = googleSignInAccount.getDisplayName();
+            String email = googleSignInAccount.getEmail();
+//            User user = new User(personName, email);
             Toast.makeText(this, "Person Name "+ personName , Toast.LENGTH_SHORT).show();
         }
     }
