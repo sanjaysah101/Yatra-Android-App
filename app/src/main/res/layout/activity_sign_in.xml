@@ -90,7 +90,7 @@
 
 
         <CheckBox
-            android:id="@+id/c"
+            android:id="@+id/checkbox"
             android:layout_width="164dp"
             android:layout_height="65dp"
             android:layout_marginStart="20dp"
@@ -115,7 +115,7 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/loginbtn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/c"
+            app:layout_constraintTop_toTopOf="@+id/checkbox"
             app:layout_constraintVertical_bias="0.0" />
 
         <com.google.android.material.button.MaterialButton
@@ -128,7 +128,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/c" />
+            app:layout_constraintTop_toBottomOf="@+id/checkbox" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
@@ -183,7 +183,10 @@
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/sign_in_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:backgroundTint="@color/black"/>
+
 
 
             <ImageView

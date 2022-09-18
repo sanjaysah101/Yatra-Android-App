@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -53,6 +55,7 @@ public class SignInActivity extends AppCompatActivity {
         signUpText = findViewById(R.id.textViewSignUp);
         forgetPassword = findViewById(R.id.textViewForgetPassword);
         signInButton = findViewById(R.id.sign_in_button);
+        CheckBox checkBox = findViewById(R.id.checkbox);
 
         //Configure sign-in to request the user's ID, email address, and basic profile. ID and basic profile are included in DEFAULT_SIGN+IN.
 
@@ -92,6 +95,12 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(signUpIntent);
+            }
+        });
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                checkBox.setBackgroundColor(Color.parseColor("#cbff75"));
             }
         });
     }
