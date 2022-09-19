@@ -9,8 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="__p__sign_in_color">#000000</color>
 
-
     <color name="primary">#F55D1C</color>
     <color name="lightWhite">#5F5F5F</color>
+    <color name="textWhite">#F6F6F6</color>
     <color name="linkColor">#304FFE</color>
 </resources>
