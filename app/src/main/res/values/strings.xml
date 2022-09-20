@@ -2,4 +2,7 @@
     <string name="app_name">Yatra</string>
     <string name="__p__sign_in_string">SIGN IN</string>
     <string name="__p__sign_up_string">SIGN UP</string>
+    <string name="btnAddToCart">Add To Cart</string>
+    <string name="btnAddToCartClicked">Go To Cart</string>
+
 </resources>

@@ -108,14 +108,14 @@ public class MainActivity extends AppCompatActivity {
         models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
         models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
         models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+//        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+//        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+//        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+//        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+//        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+//        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
 
         return models;
     }
