@@ -29,8 +29,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<RecyclerCardProductsModel> arrContacts = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
@@ -42,34 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
 
-
-
-        RecyclerCardProductsAdapter recyclerCardProductsAdapter = new RecyclerCardProductsAdapter(this, arrContacts);
+        RecyclerCardProductsAdapter recyclerCardProductsAdapter = new RecyclerCardProductsAdapter(this, productArrayList());
         recyclerView.setAdapter(recyclerCardProductsAdapter);
         // ------------- Splash Screen Start -------------
 //        new Handler().postDelayed(new Runnable() {
@@ -127,6 +99,25 @@ public class MainActivity extends AppCompatActivity {
         Intent signInIntent = new Intent(this, SignInActivity.class);
         startActivity(signInIntent);
         finish();
+    }
+
+    private ArrayList<RecyclerCardProductsModel> productArrayList(){
+        ArrayList<RecyclerCardProductsModel> models = new ArrayList<>();
+
+        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+
+        return models;
     }
 
 

@@ -1,6 +1,7 @@
 package com.example.yatra;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,9 +30,22 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        final RecyclerCardProductsModel temp = arrayList.get(position);
+
         holder.imageProduct.setImageResource(arrayList.get(position).img);
         holder.txtPrductTitle.setText(arrayList.get(position).title);
         holder.txtProductPrice.setText(arrayList.get(position).price);
+
+        holder.imageProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent productIntent = new Intent(context, SingleProductPage.class);
+                productIntent.putExtra("productTitle", temp.getTitle());
+                productIntent.putExtra("productPrice", temp.getPrice());
+                productIntent.putExtra("productImage", temp.getImg());
+                context.startActivity(productIntent);
+            }
+        });
     }
 
     @Override
