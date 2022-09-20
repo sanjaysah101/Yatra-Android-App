@@ -3,6 +3,7 @@ package com.example.yatra;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -39,29 +40,33 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recyclerCardProducts);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
+        arrContacts.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
 
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_foreground, "Sanjay Kumar Sah", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_foreground, "Sanjay Kumar Sah", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_foreground, "Sanjay Kumar Sah", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
-        arrContacts.add(new RecyclerCardProductsModel(R.drawable.ic_launcher_background, "Sanjay", "8797421521"));
 
 
         RecyclerCardProductsAdapter recyclerCardProductsAdapter = new RecyclerCardProductsAdapter(this, arrContacts);

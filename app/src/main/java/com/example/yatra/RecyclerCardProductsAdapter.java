@@ -29,9 +29,9 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imgContact.setImageResource(arrayList.get(position).img);
-        holder.txtName.setText(arrayList.get(position).name);
-        holder.txtNumber.setText(arrayList.get(position).number);
+        holder.imageProduct.setImageResource(arrayList.get(position).img);
+        holder.txtPrductTitle.setText(arrayList.get(position).title);
+        holder.txtProductPrice.setText(arrayList.get(position).price);
     }
 
     @Override
@@ -40,13 +40,13 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
     }
 
     public static class ViewHolder extends  RecyclerView.ViewHolder{
-        TextView txtName, txtNumber;
-        ImageView imgContact;
+        TextView txtPrductTitle, txtProductPrice;
+        ImageView imageProduct;
         public ViewHolder(View itemView){
             super(itemView);
-            txtName = itemView.findViewById(R.id.txtName);
-            txtNumber = itemView.findViewById(R.id.txtNumber);
-            imgContact = itemView.findViewById(R.id.imgContact);
+            txtPrductTitle = itemView.findViewById(R.id.txtProductTitle);
+            txtProductPrice = itemView.findViewById(R.id.txtProductPrice);
+            imageProduct = itemView.findViewById(R.id.imageProduct);
         }
     }
 }

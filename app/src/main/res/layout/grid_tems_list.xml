@@ -6,82 +6,69 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="7dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/lRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="11dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="84dp">
+            app:cardCornerRadius="7dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imgContact"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:backgroundTint="#c6f492"
-                android:src="@drawable/ic_launcher_background" />
+
 
             <LinearLayout
+                android:id="@+id/lRow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="11dp"
+                android:padding="11dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="84dp"
                 android:orientation="vertical">
-                <TextView
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:elevation="11dp"
+                    app:cardCornerRadius="11dp"
+                    android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="300dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tomato"
+                    tools:srcCompat="@drawable/tomato" />
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtName"
-                    android:text="Contact"
-                    android:textSize="22sp"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:id="@+id/txtNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="Contact Number"/>
+                    android:layout_marginTop="11dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtProductTitle"
+                        android:text="Contact"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/txtProductPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="30 Rs"/>
+                </LinearLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-    </androidx.cardview.widget.CardView>
-
-<!--    <androidx.cardview.widget.CardView-->
-<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="120dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_margin="5dp"-->
-<!--        app:cardCornerRadius="5dp"-->
-<!--        app:cardElevation="5dp">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/idIVcourse"-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:src="@mipmap/ic_launcher" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/idTVCourse"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/app_name"-->
-<!--                android:textAlignment="center" />-->
-<!--        </LinearLayout>-->
-<!--    </androidx.cardview.widget.CardView>-->
 </LinearLayout>
