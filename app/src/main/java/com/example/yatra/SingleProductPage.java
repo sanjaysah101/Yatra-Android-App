@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.utils.widget.ImageFilterButton;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,7 @@ public class SingleProductPage extends AppCompatActivity {
     ImageButton rating1, rating2, rating3, rating4, rating5;
     ImageButton removeProduct, addProduct;
     Button btnAddToCart;
-    int totalProduct, index;
+    int totalProduct;
     List<ImageButton> ratingButtons = new ArrayList<ImageButton>();
 
 
@@ -33,6 +34,7 @@ public class SingleProductPage extends AppCompatActivity {
         setContentView(R.layout.activity_single_product_page);
 
         initRating();
+        Intent myCartActivityIntent = new Intent(this, MyCartActivity.class);
 //        numberPickerQantity = findViewById(R.id.numberPickerQantity);
         imageProduct = findViewById(R.id.imageProduct);
         productTitle = findViewById(R.id.productTitle);
@@ -57,9 +59,6 @@ public class SingleProductPage extends AppCompatActivity {
             public void onClick(View view) {
                 totalProduct++;
                 productQuantity.setText("" + totalProduct);
-
-
-
             }
         });
         removeProduct.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +90,8 @@ public class SingleProductPage extends AppCompatActivity {
             public void onClick(View view) {
                 btnAddToCart.setText(getResources().getString(R.string.btnAddToCartClicked));
                 btnAddToCart.setBackgroundColor(getResources().getColor(R.color.btnColor2));
+
+                startActivity(myCartActivityIntent);
             }
         });
 

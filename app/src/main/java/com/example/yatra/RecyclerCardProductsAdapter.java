@@ -33,7 +33,7 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
         final RecyclerCardProductsModel temp = arrayList.get(position);
 
         holder.imageProduct.setImageResource(arrayList.get(position).img);
-        holder.txtPrductTitle.setText(arrayList.get(position).title);
+        holder.txtProductTitle.setText(arrayList.get(position).title);
         holder.txtProductPrice.setText(arrayList.get(position).price);
 
         holder.imageProduct.setOnClickListener(new View.OnClickListener() {
@@ -54,11 +54,11 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
     }
 
     public static class ViewHolder extends  RecyclerView.ViewHolder{
-        TextView txtPrductTitle, txtProductPrice;
+        TextView txtProductTitle, txtProductPrice;
         ImageView imageProduct;
         public ViewHolder(View itemView){
             super(itemView);
-            txtPrductTitle = itemView.findViewById(R.id.txtProductTitle);
+            txtProductTitle = itemView.findViewById(R.id.txtProductTitle);
             txtProductPrice = itemView.findViewById(R.id.txtProductPrice);
             imageProduct = itemView.findViewById(R.id.imageProduct);
         }
