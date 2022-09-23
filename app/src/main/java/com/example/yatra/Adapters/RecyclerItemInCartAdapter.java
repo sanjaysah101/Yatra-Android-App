@@ -1,4 +1,4 @@
-package com.example.yatra;
+package com.example.yatra.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.yatra.R;
+import com.example.yatra.Models.RecyclerItemInCartModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +41,12 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         List<ImageButton> ratingButtons = new ArrayList<ImageButton>();
+        String price = new String(Integer.toString(arrayList.get(position).getPrice()) + " Rs");
 
 
-        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
+//        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
         holder.productTitle.setText(arrayList.get(position).getTitle());
-        holder.productPrice.setText(Integer.toString(arrayList.get(position).getPrice()));
+        holder.productPrice.setText(price);
         holder.deliveryDate.setText(arrayList.get(position).getDeliveryDate());
         holder.deliveryMode.setText(arrayList.get(position).getDeliveryMode());
 

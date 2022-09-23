@@ -1,4 +1,4 @@
-package com.example.yatra;
+package com.example.yatra.Models;
 
 public class RecyclerItemInCartModel {
     private String title, deliveryDate, deliveryMode;
@@ -22,8 +22,9 @@ public class RecyclerItemInCartModel {
     }
 
     public String getDeliveryDate() {
-        deliveryDate = "Delivery By "+deliveryDate;
-        return deliveryDate;
+//        deliveryDate = "Delivery By "+deliveryDate;
+        String s = new String("Delivery By " + deliveryDate);
+        return s;
     }
 
     public void setDeliveryDate(String deliveryDate) {

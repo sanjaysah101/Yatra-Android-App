@@ -1,8 +1,8 @@
-package com.example.yatra;
+package com.example.yatra.Models;
 
 public class RecyclerCardProductsModel {
-    int img;
-    String title, price;
+    private int img;
+    private String title, price;
 
     public int getImg() {
         return img;

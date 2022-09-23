@@ -52,14 +52,14 @@
                     android:adjustViewBounds="true"
                     android:contentDescription="Image Description"
                     android:maxHeight="300dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/broccoli" />
+                    android:scaleType="centerCrop" />
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginStart="11dp">
 
 
                 <TextView
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="11dp"
-                    android:text="Broccoli"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="26sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -136,7 +136,7 @@
                     android:id="@+id/productPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="45 Rs"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -154,7 +154,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:elevation="11dp"
                 app:cardCornerRadius="10dp"
@@ -209,7 +209,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="11dp"
-                android:text="Delevery By 1 Oct"
+                android:text=""
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:textSize="16sp" />
@@ -226,7 +226,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="11dp"
                 android:gravity="center"
-                android:text="Free delivery"
+                android:text=""
                 android:textColor="@color/deliveryColor"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -238,12 +238,11 @@
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="150dp"
+                style="@style/Button1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:drawableLeft="@drawable/ic_baseline_remove_shopping_cart_24"
-                android:drawableTint="@color/white"
                 android:text="Remove"
+                android:drawableLeft="@drawable/ic_baseline_remove_shopping_cart_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/buyNow"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -253,12 +252,12 @@
 
             <Button
                 android:id="@+id/buyNow"
-                android:layout_width="150dp"
+                style="@style/Button1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:drawableLeft="@drawable/ic_baseline_remove_shopping_cart_24"
-                android:drawableTint="@color/white"
                 android:text="Buy Now"
+                android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

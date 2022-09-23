@@ -32,10 +32,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
+                android:contentDescription="Image Description"
                 android:maxHeight="300dp"
                 android:scaleType="centerCrop"
-                tools:srcCompat="@drawable/broccoli"
-                android:contentDescription="Image Description"/>
+                tools:srcCompat="@drawable/broccoli" />
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -63,88 +63,92 @@
 
             <ImageButton
                 android:id="@+id/rating1"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="Rating 1"
                 android:tag="1"
-                app:srcCompat="@drawable/ic_baseline_star_outline_48" />
+                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
             <ImageButton
                 android:id="@+id/rating2"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="Rating 2"
                 android:tag="2"
-                app:srcCompat="@drawable/ic_baseline_star_outline_48" />
+                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
             <ImageButton
                 android:id="@+id/rating3"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="Rating 3"
                 android:tag="3"
-                app:srcCompat="@drawable/ic_baseline_star_outline_48" />
+                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
             <ImageButton
                 android:id="@+id/rating4"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="Rating 4"
                 android:tag="4"
-                app:srcCompat="@drawable/ic_baseline_star_outline_48" />
+                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
             <ImageButton
                 android:id="@+id/rating5"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="Rating 5"
                 android:tag="5"
-                app:srcCompat="@drawable/ic_baseline_star_outline_48" />
+                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
 
-<!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
-<!--                android:id="@+id/rating1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:background="@color/white"-->
-<!--                android:src="@drawable/ic_baseline_star_outline_48"-->
-<!--                android:contentDescription="Rating 1"/>-->
-<!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
-<!--                android:id="@+id/rating2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:background="@color/white"-->
-<!--                android:src="@drawable/ic_baseline_star_rate_48"-->
-<!--                android:contentDescription="Rating 1"/>-->
+            <!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
+            <!--                android:id="@+id/rating1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:adjustViewBounds="true"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:src="@drawable/ic_baseline_star_outline_48"-->
+            <!--                android:contentDescription="Rating 1"/>-->
+            <!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
+            <!--                android:id="@+id/rating2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:adjustViewBounds="true"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:src="@drawable/ic_baseline_star_rate_48"-->
+            <!--                android:contentDescription="Rating 1"/>-->
 
-<!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
-<!--                android:id="@+id/rating3"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:background="@color/white"-->
-<!--                android:src="@drawable/ic_baseline_star_rate_48"-->
-<!--                android:contentDescription="Rating 2"/>-->
+            <!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
+            <!--                android:id="@+id/rating3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:adjustViewBounds="true"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:src="@drawable/ic_baseline_star_rate_48"-->
+            <!--                android:contentDescription="Rating 2"/>-->
 
-<!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
-<!--                android:id="@+id/rating4"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:background="@color/white"-->
-<!--                android:src="@drawable/ic_baseline_star_rate_48"-->
-<!--                android:contentDescription="Rating 3"/>-->
+            <!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
+            <!--                android:id="@+id/rating4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:adjustViewBounds="true"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:src="@drawable/ic_baseline_star_rate_48"-->
+            <!--                android:contentDescription="Rating 3"/>-->
 
-<!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
-<!--                android:id="@+id/rating5"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:background="@color/white"-->
-<!--                android:src="@drawable/ic_baseline_star_half_48"-->
-<!--                android:contentDescription="Rating 4"/>-->
+            <!--            <androidx.constraintlayout.utils.widget.ImageFilterButton-->
+            <!--                android:id="@+id/rating5"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:adjustViewBounds="true"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:src="@drawable/ic_baseline_star_half_48"-->
+            <!--                android:contentDescription="Rating 4"/>-->
 
         </LinearLayout>
 
@@ -246,9 +250,9 @@
                     android:id="@+id/productQuantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
                     android:layout_marginStart="11dp"
                     android:layout_marginEnd="11dp"
+                    android:text="1"
                     android:textColor="@color/black"
                     android:textSize="26sp"
                     android:textStyle="bold" />
@@ -275,9 +279,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
+            android:drawableTint="@color/white"
             android:text="@string/btnAddToCart"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.582"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productPrice" />
 

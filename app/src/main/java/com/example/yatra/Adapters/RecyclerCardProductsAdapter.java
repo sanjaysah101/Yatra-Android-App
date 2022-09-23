@@ -1,4 +1,4 @@
-package com.example.yatra;
+package com.example.yatra.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,13 +11,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.yatra.R;
+import com.example.yatra.Models.RecyclerCardProductsModel;
+import com.example.yatra.SingleProductPage;
+
 import java.util.ArrayList;
 
 public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCardProductsAdapter.ViewHolder> {
 
     Context context;
     ArrayList<RecyclerCardProductsModel> arrayList;
-    RecyclerCardProductsAdapter(Context context, ArrayList<RecyclerCardProductsModel> arrayList){
+    public RecyclerCardProductsAdapter(Context context, ArrayList<RecyclerCardProductsModel> arrayList){
         this.context = context;
         this.arrayList = arrayList;
     }
@@ -32,9 +36,9 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final RecyclerCardProductsModel temp = arrayList.get(position);
 
-        holder.imageProduct.setImageResource(arrayList.get(position).img);
-        holder.txtProductTitle.setText(arrayList.get(position).title);
-        holder.txtProductPrice.setText(arrayList.get(position).price);
+        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
+        holder.txtProductTitle.setText(arrayList.get(position).getTitle());
+        holder.txtProductPrice.setText(arrayList.get(position).getPrice());
 
         holder.imageProduct.setOnClickListener(new View.OnClickListener() {
             @Override
