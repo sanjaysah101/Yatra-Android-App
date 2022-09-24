@@ -36,7 +36,7 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final RecyclerCardProductsModel temp = arrayList.get(position);
 
-        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
+//        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
         holder.txtProductTitle.setText(arrayList.get(position).getTitle());
         holder.txtProductPrice.setText(arrayList.get(position).getPrice());
 
