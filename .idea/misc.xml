@@ -15,7 +15,7 @@
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_enter_otp.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_enter_password.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_forget_password.xml" value="0.19067977768277042" />
-        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_my_cart.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_password_reset_successfull.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
@@ -23,6 +23,8 @@
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_single_item_in_cart.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_single_product_page.xml" value="0.264" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/fragment_home.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/fragment_my_cart.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/fragment_single_product_page.xml" value="0.1791363830696879" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/grid_tems_list.xml" value="0.18982471141513468" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/single_item_in_cart.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.18982471141513468" />

@@ -16,9 +16,6 @@
         android:theme="@style/Theme.Yatra"
         tools:targetApi="31">
         <activity
-            android:name=".MyCartActivity"
-            android:exported="false" />
-        <activity
             android:name=".SingleProductPage"
             android:exported="false" />
         <activity

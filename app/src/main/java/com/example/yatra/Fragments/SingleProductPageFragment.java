@@ -1,28 +1,32 @@
-package com.example.yatra;
+package com.example.yatra.Fragments;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.utils.widget.ImageFilterButton;
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.yatra.Fragments.MyCartFragment;
+import com.example.yatra.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SingleProductPage extends AppCompatActivity {
 
-//    NumberPicker numberPickerQuantity;
+public class SingleProductPageFragment extends Fragment {
+
+
+    public SingleProductPageFragment() {
+        // Required empty public constructor
+    }
+
     ImageView imageProduct;
     TextView productTitle, productPrice,productDescription, productQuantity;
     ImageButton rating1, rating2, rating3, rating4, rating5;
@@ -31,33 +35,34 @@ public class SingleProductPage extends AppCompatActivity {
     int totalProduct;
     List<ImageButton> ratingButtons = new ArrayList<ImageButton>();
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_single_product_page);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_single_product_page, container, false);
+
 
         initRating();
 //        Intent myCartActivityIntent = new Intent(this, MyCartActivity.class);
-        Fragment fragment = new MyCartFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//        Fragment fragment = new MyCartFragment();
+//        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
 //        numberPickerQuantity = findViewById(R.id.numberPickerQuantity);
-        imageProduct = findViewById(R.id.imageProduct);
-        productTitle = findViewById(R.id.productTitle);
-        productDescription = findViewById(R.id.productDescription);
-        productPrice = findViewById(R.id.productPrice);
-        addProduct = findViewById(R.id.addProduct);
-        removeProduct = findViewById(R.id.removeProduct);
-        productQuantity = findViewById(R.id.productQuantity);
-        btnAddToCart = findViewById(R.id.addToCartBtn);
+        imageProduct = view.findViewById(R.id.imageProduct);
+        productTitle = view.findViewById(R.id.productTitle);
+        productDescription = view.findViewById(R.id.productDescription);
+        productPrice = view.findViewById(R.id.productPrice);
+        addProduct = view.findViewById(R.id.addProduct);
+        removeProduct = view.findViewById(R.id.removeProduct);
+        productQuantity = view.findViewById(R.id.productQuantity);
+        btnAddToCart = view.findViewById(R.id.addToCartBtn);
 
 //        numberPickerQuantity.setMaxValue(10);
 //        numberPickerQuantity.setMinValue(1);
 
-        imageProduct.setImageResource(getIntent().getIntExtra("productImage", 0));
-        productTitle.setText(getIntent().getStringExtra("productTitle"));
-        productPrice.setText(getIntent().getStringExtra("productPrice"));
+//        imageProduct.setImageResource(getIntent().getIntExtra("productImage", 0));
+//        productTitle.setText(getIntent().getStringExtra("productTitle"));
+//        productPrice.setText(getIntent().getStringExtra("productPrice"));
 
 
         addProduct.setOnClickListener(new View.OnClickListener() {
@@ -102,15 +107,14 @@ public class SingleProductPage extends AppCompatActivity {
             }
         });
 
-
+        return view;
     }
-
     private void initRating(){
-        rating1 = findViewById(R.id.rating1);
-        rating2 = findViewById(R.id.rating2);
-        rating3 = findViewById(R.id.rating3);
-        rating4 = findViewById(R.id.rating4);
-        rating5 = findViewById(R.id.rating5);
+        rating1 = getView().findViewById(R.id.rating1);
+        rating2 = getView().findViewById(R.id.rating2);
+        rating3 = getView().findViewById(R.id.rating3);
+        rating4 = getView().findViewById(R.id.rating4);
+        rating5 = getView().findViewById(R.id.rating5);
 
         ratingButtons.add(rating1);
         ratingButtons.add(rating2);
