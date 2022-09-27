@@ -48,8 +48,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (R.id.bottom_nav_home == item.getItemId()){
                     loadFrag(new HomeFragment());
+                    progressBar.setVisibility(View.INVISIBLE);
                 }else if (R.id.bottom_nav_cart == item.getItemId()){
+                    progressBar.setVisibility(View.VISIBLE);
                     loadFrag(new MyCartFragment());
+                    progressBar.setVisibility(View.INVISIBLE);
                 }else if (R.id.bottom_nav_favorite_list == item.getItemId()){
                     Toast.makeText(MainActivity.this, "favorite clicked", Toast.LENGTH_SHORT).show();
                 }else if (R.id.bottom_nav_my_Profile == item.getItemId()){

@@ -1,12 +1,16 @@
 package com.example.yatra.Adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,15 +21,25 @@ import com.example.yatra.Models.RecyclerCardProductsModel;
 import com.example.yatra.SingleProductPage;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCardProductsAdapter.ViewHolder> {
 
     Context context;
-    ArrayList<RecyclerCardProductsModel> arrayList;
+    ArrayList<RecyclerCardProductsModel> productModelArrayList;
+//    ArrayList<RecyclerCardProductsModel> backup;
     public RecyclerCardProductsAdapter(Context context, ArrayList<RecyclerCardProductsModel> arrayList){
         this.context = context;
-        this.arrayList = arrayList;
+        this.productModelArrayList = arrayList;
+//        this.backup = arrayList;
     }
+
+//    method for filtering our recyclerview items
+    public void filterList(ArrayList<RecyclerCardProductsModel> filterList){
+        productModelArrayList = filterList;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -35,11 +49,11 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final RecyclerCardProductsModel temp = arrayList.get(position);
+        final RecyclerCardProductsModel temp = productModelArrayList.get(position);
 
 //        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
-        holder.txtProductTitle.setText(arrayList.get(position).getTitle());
-        holder.txtProductPrice.setText(arrayList.get(position).getPrice());
+        holder.txtProductTitle.setText(productModelArrayList.get(position).getTitle());
+        holder.txtProductPrice.setText(productModelArrayList.get(position).getPrice());
 
         holder.imageProduct.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,8 +69,45 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
 
     @Override
     public int getItemCount() {
-        return arrayList.size();
+        return productModelArrayList.size();
     }
+
+//    @Override
+//    public Filter getFilter() {
+//
+//        return filter;
+//    }
+//    Filter filter = new Filter() {
+//        @Override
+//        protected FilterResults performFiltering(CharSequence charSequence) {
+//            ArrayList<RecyclerCardProductsModel> filteredData = new ArrayList<>();
+//
+//            if (charSequence.toString().isEmpty()){
+//                filteredData.addAll(backup);
+////                Toast.makeText(context, "Search field is empty", Toast.LENGTH_SHORT).show();
+//            }
+//            else{
+//                for (RecyclerCardProductsModel obj: backup){
+//                    if(obj.getTitle().toString().toLowerCase().trim().contains(charSequence.toString().toLowerCase().trim())){
+//                        filteredData.add(obj);
+////                        Toast.makeText(context, obj.getTitle(), Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            }
+//
+//            FilterResults results = new FilterResults();
+//            results.values = filteredData;
+//            return results;
+//        }
+//
+//        @SuppressLint("NotifyDataSetChanged")
+//        @Override
+//        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+//            arrayList.clear();
+//            arrayList.addAll((ArrayList<RecyclerCardProductsModel>)filterResults.values);
+//            notifyDataSetChanged();
+//        }
+//    };
 
     public static class ViewHolder extends  RecyclerView.ViewHolder{
         TextView txtProductTitle, txtProductPrice;
