@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.yatra.Models.RecyclerCardProductsModel;
 import com.example.yatra.R;
 
 import java.util.ArrayList;
@@ -57,13 +58,6 @@ public class SingleProductPageFragment extends Fragment {
         productQuantity = view.findViewById(R.id.productQuantity);
         btnAddToCart = view.findViewById(R.id.addToCartBtn);
 
-//        numberPickerQuantity.setMaxValue(10);
-//        numberPickerQuantity.setMinValue(1);
-
-//        imageProduct.setImageResource(getIntent().getIntExtra("productImage", 0));
-//        productTitle.setText(getIntent().getStringExtra("productTitle"));
-//        productPrice.setText(getIntent().getStringExtra("productPrice"));
-
 
         addProduct.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
@@ -92,7 +86,7 @@ public class SingleProductPageFragment extends Fragment {
                     ImageButton clickedRating = (ImageButton) view;
                     int clickedRatingTag = Integer.parseInt(view.getTag().toString());
                     updateRating(clickedRatingTag);
-//                    Toast.makeText(SingleProductPage.this, "Clicked", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(SingleProductPageActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -100,6 +94,9 @@ public class SingleProductPageFragment extends Fragment {
         btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
                 btnAddToCart.setText(getResources().getString(R.string.btnAddToCartClicked));
                 btnAddToCart.setBackgroundColor(getResources().getColor(R.color.btnColor2));
 
@@ -110,6 +107,7 @@ public class SingleProductPageFragment extends Fragment {
         return view;
     }
     private void initRating(){
+
         rating1 = getView().findViewById(R.id.rating1);
         rating2 = getView().findViewById(R.id.rating2);
         rating3 = getView().findViewById(R.id.rating3);

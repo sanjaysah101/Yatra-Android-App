@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Yatra"
         tools:targetApi="31">
         <activity
-            android:name=".SingleProductPage"
+            android:name=".SingleProductPageActivity"
             android:exported="false" />
         <activity
             android:name=".PasswordResetSuccessfulActivity"

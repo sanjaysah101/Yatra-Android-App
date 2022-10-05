@@ -41,12 +41,19 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         List<ImageButton> ratingButtons = new ArrayList<ImageButton>();
-        String price = new String(Integer.toString(arrayList.get(position).getPrice()) + " Rs");
+
+        RecyclerItemInCartModel recyclerItemInCartModel = arrayList.get(position);
+
+        int unitPrice = recyclerItemInCartModel.getPrice();
+        int quantity = recyclerItemInCartModel.getQuantity();
+        int totalPrice = unitPrice * quantity;
+        String priceString = new String(""+unitPrice+ " Rs | Total: " + totalPrice);
 
 
 //        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
         holder.productTitle.setText(arrayList.get(position).getTitle());
-        holder.productPrice.setText(price);
+        holder.productPrice.setText(priceString);
+        holder.productQuantity.setText(""+quantity);
         holder.deliveryDate.setText(arrayList.get(position).getDeliveryDate());
         holder.deliveryMode.setText(arrayList.get(position).getDeliveryMode());
 
@@ -65,18 +72,26 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
                     ImageButton clickedRating = (ImageButton) view;
                     int clickedRatingTag = Integer.parseInt(view.getTag().toString());
                     updateRating(clickedRatingTag, ratingButtons);
-//                    Toast.makeText(SingleProductPage.this, "Clicked", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(SingleProductPageActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
                 }
             });
         }
 
         //To increase quantity of the product
+
+
         holder.addProduct.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
+                totalProduct = recyclerItemInCartModel.getQuantity();
+
                 totalProduct++;
-                holder.productQuantity.setText("" + totalProduct);
+                int totalPrice = unitPrice * totalProduct;
+                holder.productQuantity.setText(""+totalProduct);
+                recyclerItemInCartModel.setQuantity(totalProduct);
+                String priceString = new String(""+unitPrice+ " Rs | Total: " + totalPrice);
+                holder.productPrice.setText(priceString);
             }
         });
         //To decrease quantity
@@ -84,9 +99,16 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
+//                int totalProduct = quantity;
+//                totalProduct++;
+                totalProduct = recyclerItemInCartModel.getQuantity();
                 if(totalProduct > 1)
                     totalProduct--;
+                int totalPrice = unitPrice * totalProduct;
                 holder.productQuantity.setText(""+totalProduct);
+                recyclerItemInCartModel.setQuantity(totalProduct);
+                String priceString = new String(""+unitPrice+ " Rs | Total: " + totalPrice);
+                holder.productPrice.setText(priceString);
             }
         });
     }

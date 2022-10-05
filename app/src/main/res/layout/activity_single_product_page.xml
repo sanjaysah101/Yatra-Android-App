@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="11dp"
-    tools:context=".SingleProductPage">
+    tools:context=".SingleProductPageActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -177,21 +177,6 @@
             app:layout_constraintTop_toBottomOf="@+id/productDescriptionTitle"
             app:layout_constraintVertical_bias="0.038" />
 
-        <TextView
-            android:id="@+id/productPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="45 Rs"
-            android:textColor="@color/black"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.959"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productDescription"
-            app:layout_constraintVertical_bias="0.204" />
-
         <!--        <NumberPicker-->
         <!--            android:id="@+id/numberPickerQantity"-->
         <!--            android:layout_width="145dp"-->
@@ -218,6 +203,35 @@
         <!--            -->
         <!--            android:gravity="center"-->
         <!--            android:orientation="horizontal">-->
+
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45 Rs / KG"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.958"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productDescription"
+            app:layout_constraintVertical_bias="0.129" />
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Total: 45 Rs"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.957"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productPrice" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="150dp"
@@ -278,14 +292,13 @@
             style="@style/Button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="48dp"
             android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
             android:drawableTint="@color/white"
             android:text="@string/btnAddToCart"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+            app:layout_constraintTop_toBottomOf="@+id/totalPrice" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

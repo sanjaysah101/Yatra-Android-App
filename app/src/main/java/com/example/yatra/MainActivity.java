@@ -54,9 +54,13 @@ public class MainActivity extends AppCompatActivity {
                     loadFrag(new MyCartFragment());
                     progressBar.setVisibility(View.INVISIBLE);
                 }else if (R.id.bottom_nav_favorite_list == item.getItemId()){
+                    progressBar.setVisibility(View.VISIBLE);
                     Toast.makeText(MainActivity.this, "favorite clicked", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }else if (R.id.bottom_nav_my_Profile == item.getItemId()){
+                    progressBar.setVisibility(View.VISIBLE);
                     Toast.makeText(MainActivity.this, "profile clicked", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
                 return true;
             }

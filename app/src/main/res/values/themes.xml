@@ -39,4 +39,9 @@
 <!--        <item name="android:backgroundTint">@color/primary</item>-->
 <!--    </style>-->
 
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
 </resources>

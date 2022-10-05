@@ -23,8 +23,7 @@ public class RecyclerItemInCartModel {
 
     public String getDeliveryDate() {
 //        deliveryDate = "Delivery By "+deliveryDate;
-        String s = new String("Delivery By " + deliveryDate);
-        return s;
+        return new String("Delivery By " + deliveryDate);
     }
 
     public void setDeliveryDate(String deliveryDate) {

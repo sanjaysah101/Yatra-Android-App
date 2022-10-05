@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.yatra.Adapters.RecyclerCardProductsAdapter;
 import com.example.yatra.Models.RecyclerCardProductsModel;
+import com.example.yatra.Models.Product;
 import com.example.yatra.R;
 
 import java.util.ArrayList;
@@ -74,18 +75,24 @@ public class HomeFragment extends Fragment {
     private ArrayList<RecyclerCardProductsModel> productArrayList(){
         ArrayList<RecyclerCardProductsModel> models = new ArrayList<>();
 
-        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
-        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", "45 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", "30 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", "20 Rs."));
-        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", "25 Rs"));
+        Product product = new Product("Fruit20220510", "Apple", "This is apple", "apple.jpg", "Fruit", 100, "Kg");
+        models.add(new RecyclerCardProductsModel(product));
+        Product product1 = new Product("Fruit20220511", "Banana", "This is apple", "apple.jpg", "Fruit", 40, "Kg");
+        models.add(new RecyclerCardProductsModel(product1));
+
+
+//        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", 45, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", 30, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", 20, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Milk", 25, "l"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Mobile", 45, "piece"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", 30, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", 20, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", 25, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.broccoli, "Broccoli", 45, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.potato, "Potato", 30, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.onion, "Onion", 20, "Kg"));
+//        models.add(new RecyclerCardProductsModel(R.drawable.capsicum, "Capsicum", 25, "Kg"));
 
         return models;
     }
