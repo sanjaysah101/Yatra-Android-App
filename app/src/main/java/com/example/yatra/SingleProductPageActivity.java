@@ -1,7 +1,10 @@
 package com.example.yatra;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.utils.widget.ImageFilterButton;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -9,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -19,12 +23,14 @@ import android.widget.Toast;
 import com.example.yatra.Fragments.MyCartFragment;
 import com.example.yatra.Models.AddToCart;
 import com.example.yatra.Models.Product;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SingleProductPageActivity extends AppCompatActivity {
-
+    public DrawerLayout drawerLayout;
+    public ActionBarDrawerToggle actionBarDrawerToggle;
 //    NumberPicker numberPickerQuantity;
     ImageView imageProduct;
     TextView productTitle, productPrice,productDescription, productQuantity, totalPrice;
@@ -63,7 +69,9 @@ public class SingleProductPageActivity extends AppCompatActivity {
 //        String productId = getIntent().getStringExtra("productId");
 //        String productId = product.getName();
 
-        imageProduct.setImageResource(getIntent().getIntExtra("productImage", 0));
+        Picasso.get().load(product.getImage())
+                .resize(200,200)
+                        .into(imageProduct);
 //        productTitle.setText(getIntent().getStringExtra("productTitle"));
         productTitle.setText(product.getName());
         String unit = product.getUnit();
@@ -115,33 +123,27 @@ public class SingleProductPageActivity extends AppCompatActivity {
         btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ArrayList<AddToCart> mycart = new ArrayList<>();
-                AddToCart addToCart = new AddToCart(product, totalProduct);
-                mycart.add(addToCart);
-
-                btnAddToCart.setText(getResources().getString(R.string.btnAddToCartClicked));
-                btnAddToCart.setBackgroundColor(getResources().getColor(R.color.btnColor2));
-//                Intent intent = new Intent(getApplicationContext(), MyCartFragment.class);
-//                finish();
-
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                final MyCartFragment myFragment = new MyCartFragment();
-//
-//                Bundle b = new Bundle();
-//                b.putString("message", "Saved to cart");
-//                myFragment.setArguments(b);
-//                fragmentTransaction.add(R.id.frameLayout, myFragment).commit();
-
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.add(R.id.recyclerViewMyItems, new MyCartFragment());
-//                fragmentTransaction.commit();
 
             }
         });
+        drawerLayout = findViewById(R.id.my_drawer_layout);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
 
+        // pass the Open and Close toggle for the drawer layout listener
+        // to toggle the button
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
 
+        // to make the Navigation drawer icon always appear on the action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void initRating(){

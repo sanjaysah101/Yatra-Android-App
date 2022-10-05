@@ -6,5 +6,11 @@
     <string name="btnAddToCartClicked">Go To Cart</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_buttom_navigation">ButtomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="nav_open">open</string>
+    <string name="nav_close">close</string>
 
 </resources>

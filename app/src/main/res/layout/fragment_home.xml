@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.HomeFragment">
-
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="200dp"
+            android:elevation="11dp"
+            app:cardCornerRadius="11dp"
+            app:cardUseCompatPadding="true">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:elevation="11dp"
-                app:cardCornerRadius="11dp"
-                app:cardUseCompatPadding="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -41,189 +34,42 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/tomato" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="11dp">
-
-                    <TextView
-                        android:id="@+id/productTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="44dp"
-                        android:text="Tomato"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Buy Now"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/productTitle"
-                        app:layout_constraintVertical_bias="0.3" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-<!--            <LinearLayout-->
-<!--                android:id="@+id/linearLayout2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="22dp"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/cardView">-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/imageView4"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:layout_marginEnd="11dp"-->
-<!--                    app:srcCompat="@drawable/ic_pepper_hot" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/textView7"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Best Seller"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="26sp"-->
-<!--                    tools:layout_editor_absoluteX="48dp"-->
-<!--                    tools:layout_editor_absoluteY="250dp" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/textView8"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginEnd="11dp"-->
-<!--                    android:gravity="right"-->
-<!--                    android:text="See more"-->
-<!--                    android:textColor="@color/primary"-->
-<!--                    android:textSize="16sp"-->
-<!--                    tools:layout_editor_absoluteX="48dp"-->
-<!--                    tools:layout_editor_absoluteY="250dp" />-->
-<!--            </LinearLayout>-->
-
-
-            <!--            <View-->
-            <!--                android:id="@+id/horizontalLine"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="2dp"-->
-            <!--                android:background="@color/lightWhite"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintHorizontal_bias="0.0"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"-->
-            <!--                app:layout_constraintVertical_bias="0.049" />-->
-
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/searchView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:background="@drawable/search_view_bg"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView"
-                app:layout_constraintVertical_bias="0.0"
-                app:queryHint="Search here..." />
-
-            <!--            <com.google.android.material.textfield.TextInputLayout-->
-            <!--                android:id="@+id/searchViewContainer"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintHorizontal_bias="0.0"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"-->
-            <!--                app:layout_constraintVertical_bias="0.0"-->
-            <!--                app:startIconDrawable="@drawable/ic_baseline_search_24">-->
-
-            <!--                <com.google.android.material.textfield.TextInputEditText-->
-            <!--                    android:id="@+id/searchView"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:layout_marginEnd="20dp"-->
-            <!--                    android:background="@drawable/search_view_bg"-->
-            <!--                    android:hint="Email"-->
-            <!--                    android:inputType="textEmailAddress"-->
-            <!--                    android:textColorHint="@color/lightWhite"-->
-            <!--                    android:textSize="24sp"-->
-            <!--                    tools:layout_editor_absoluteX="2dp" />-->
-            <!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-
-            <LinearLayout
-                android:id="@+id/CategoryList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/searchView"
-                >
-                <HorizontalScrollView
-                    android:id="@+id/horizontalScrollView2"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    >
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Tomato"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingStart="12dp">
+                <Button
+                    android:backgroundTint="@color/primary"
+                    android:text="Buy Now"
+                    android:layout_marginStart="11dp"
+                    android:layout_below="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-                        <Button
-                            android:id="@+id/category1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Fresh Vegetable"
-                            android:textColor="@color/textButton"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            />
-                        <Button
-                            android:id="@+id/category2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sessonal Vegetables"
-                            android:textColor="@color/black"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            />
-                        <Button
-                            android:id="@+id/category3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Fruits"
-                            android:textColor="@color/black"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            />
-                    </LinearLayout>
-                </HorizontalScrollView>
-            </LinearLayout>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardView"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/search_view_bg"
+            app:queryHint="Search here..." />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerCardProducts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="11dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CategoryList" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-                </ScrollView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCardProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/searchView"/>
+    </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

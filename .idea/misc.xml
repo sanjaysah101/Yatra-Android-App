@@ -13,6 +13,7 @@
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/drawable/rounded_corner.xml" value="0.2375" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/drawable/search_view_bg.xml" value="0.2065" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/font/verdana.xml" value="0.26145833333333335" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_buttom_navigation.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_enter_otp.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_enter_password.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_forget_password.xml" value="0.19067977768277042" />
@@ -23,9 +24,11 @@
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_signup.xml" value="0.176" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_single_item_in_cart.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/activity_single_product_page.xml" value="0.2" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/fragment_fruits.xml" value="0.1675929884566054" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/fragment_my_cart.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/fragment_single_product_page.xml" value="0.1791363830696879" />
+        <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/fragment_vegetable.xml" value="0.1791363830696879" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/grid_tems_list.xml" value="0.18982471141513468" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/search_view_bg.xml" value="0.18982471141513468" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/layout/single_item_in_cart.xml" value="0.19067977768277042" />

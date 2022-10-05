@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -37,6 +40,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.0.8'
     implementation 'com.google.firebase:firebase-database:20.0.6'
     implementation 'com.google.firebase:firebase-firestore:24.3.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment:2.5.2'
+    implementation 'androidx.navigation:navigation-ui:2.5.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -44,4 +51,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
     //  Splash Screen
     implementation 'androidx.core:core-splashscreen:1.0.0'
+    //for retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.squareup.picasso:picasso:2.8'
+
 }

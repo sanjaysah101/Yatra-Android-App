@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.yatra.R;
 import com.example.yatra.Models.RecyclerCardProductsModel;
 import com.example.yatra.SingleProductPageActivity;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -51,6 +52,8 @@ public class RecyclerCardProductsAdapter extends RecyclerView.Adapter<RecyclerCa
 //        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
         holder.txtProductTitle.setText(productModelArrayList.get(position).getProduct().getName());
         holder.txtProductPrice.setText(""+productModelArrayList.get(position).getPrice());
+       // Picasso.get().load(productModelArrayList.get(position).getImage()).resize(100,100).into(holder.imageProduct);
+        Picasso.get().load(productModelArrayList.get(position).getProduct().getImage()).resize(100,100).into(holder.imageProduct);
 
         holder.imageProduct.setOnClickListener(new View.OnClickListener() {
             @Override
