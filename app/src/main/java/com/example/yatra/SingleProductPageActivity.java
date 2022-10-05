@@ -3,11 +3,7 @@ package com.example.yatra;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.utils.widget.ImageFilterButton;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -20,9 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.yatra.Fragments.MyCartFragment;
-import com.example.yatra.Models.AddToCart;
 import com.example.yatra.Models.Product;
+import com.example.yatra.Sqlite.SQLiteDbHelper;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -62,6 +57,7 @@ public class SingleProductPageActivity extends AppCompatActivity {
         removeProduct = findViewById(R.id.removeProduct);
         productQuantity = findViewById(R.id.productQuantity);
         btnAddToCart = findViewById(R.id.addToCartBtn);
+        SQLiteDbHelper dbHelper = new SQLiteDbHelper(this);
 
 //        numberPickerQuantity.setMaxValue(10);
 //        numberPickerQuantity.setMinValue(1);
@@ -123,7 +119,10 @@ public class SingleProductPageActivity extends AppCompatActivity {
         btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                dbHelper.addNewData(product.getName(), product.getImage(), Integer.parseInt(productQuantity.getText().toString()), product.getPrice());
+                Toast.makeText(SingleProductPageActivity.this, "Item added to cart", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SingleProductPageActivity.this, DoneActivity.class));
+                finish();
             }
         });
         drawerLayout = findViewById(R.id.my_drawer_layout);

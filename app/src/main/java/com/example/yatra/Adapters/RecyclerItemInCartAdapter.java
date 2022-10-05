@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yatra.R;
 import com.example.yatra.Models.RecyclerItemInCartModel;
+import com.example.yatra.Sqlite.SQLiteDbHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -111,6 +112,16 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
                 holder.productPrice.setText(priceString);
             }
         });
+        holder.btnRemove.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NotifyDataSetChanged")
+            @Override
+            public void onClick(View view) {
+                SQLiteDbHelper dbHelper = new SQLiteDbHelper(context);
+                dbHelper.deleteData(Integer.toString(arrayList.get(position).getId()));
+
+                notifyDataSetChanged();
+            }
+        });
     }
 
     @Override
@@ -137,7 +148,7 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
         ImageButton rating1, rating2, rating3, rating4, rating5, removeProduct, addProduct;
         ImageView imageProduct;
         TextView productTitle, productPrice,productDescription, productQuantity, deliveryDate, deliveryMode;
-        Button btnAddToCart;
+        Button btnRemove;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -151,7 +162,7 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
             productDescription = itemView.findViewById(R.id.productDescription);
             removeProduct = itemView.findViewById(R.id.removeProduct);
             productQuantity = itemView.findViewById(R.id.productQuantity);
-            btnAddToCart = itemView.findViewById(R.id.addToCartBtn);
+            btnRemove = itemView.findViewById(R.id.btnRemove);
 
             rating1 = itemView.findViewById(R.id.rating1);
             rating2 = itemView.findViewById(R.id.rating2);

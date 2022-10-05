@@ -54,7 +54,7 @@ public class FruitsFragment extends Fragment {
                     List<List<String>> product = retrofitModel.getData();
                     for (int i = 0; i < product.size(); i++) {
                         List<String> data = product.get(i);
-                        Product product1 = new Product("", data.get(0), data.get(1), data.get(6), data.get(2), Integer.parseInt(data.get(3)), data.get(4));
+                        Product product1 = new Product(0, data.get(0), data.get(1), data.get(6), data.get(2), Integer.parseInt(data.get(3)), data.get(4));
                         models.add(new RecyclerCardProductsModel(product1));
 
                         if (models.size() == product.size()) {
@@ -65,9 +65,9 @@ public class FruitsFragment extends Fragment {
                     }
                 } else {
                     models  = new ArrayList<>();
-                    Product product = new Product("Fruit20220510", "Apple", "This is apple", "apple.jpg", "Fruit", 100, "Kg");
+                    Product product = new Product(0, "Apple", "This is apple", "apple.jpg", "Fruit", 100, "Kg");
                     models.add(new RecyclerCardProductsModel(product));
-                    Product product1 = new Product("Fruit20220511", "Banana", "This is apple", "apple.jpg", "Fruit", 40, "Kg");
+                    Product product1 = new Product(0, "Banana", "This is apple", "apple.jpg", "Fruit", 40, "Kg");
                     models.add(new RecyclerCardProductsModel(product1));
 
                     recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));

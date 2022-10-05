@@ -1,16 +1,32 @@
 package com.example.yatra.Models;
 
 public class RecyclerItemInCartModel {
-    private String title, deliveryDate, deliveryMode;
-    private int price, img, quantity;
+    private String title, deliveryDate, deliveryMode, img;
+    private int price, quantity, id;
 
-    public RecyclerItemInCartModel(String title, String deliveryDate, String deliveryMode, int price, int img, int quantity) {
+    public RecyclerItemInCartModel(String title, String deliveryDate, String deliveryMode, int price, String img, int quantity) {
         this.title = title;
         this.deliveryDate = deliveryDate;
         this.deliveryMode = deliveryMode;
         this.price = price;
         this.img = img;
         this.quantity = quantity;
+    }
+
+    public RecyclerItemInCartModel(int id,String title, String img, int price, int quantity) {
+        this.id = id;
+        this.title = title;
+        this.img = img;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -46,11 +62,11 @@ public class RecyclerItemInCartModel {
         this.price = price;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 

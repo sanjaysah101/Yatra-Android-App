@@ -3,14 +3,17 @@ package com.example.yatra.Models;
 import java.io.Serializable;
 
 public class Product implements Serializable {
-    private String id, name, description, image, type, unit;
+    private String name, description, image, type, unit;
     private int price;
+    private int id;
+    private int quantity;
 
-    public String getId() {
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -22,7 +25,15 @@ public class Product implements Serializable {
         this.unit = unit;
     }
 
-    public Product(String id, String name, String description, String image, String type, int price, String unit) {
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Product(int id, String name, String description, String image, String type, int price, String unit) {
         this.id = id;
         this.name = name;
         this.description = description;
