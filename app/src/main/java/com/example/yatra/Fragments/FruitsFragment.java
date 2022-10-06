@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -21,6 +22,7 @@ import com.example.yatra.ProductRetrofit;
 import com.example.yatra.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -55,14 +57,14 @@ public class FruitsFragment extends Fragment {
                     for (int i = 0; i < product.size(); i++) {
                         List<String> data = product.get(i);
                         Product product1 = new Product(0, data.get(0), data.get(1), data.get(6), data.get(2), Integer.parseInt(data.get(3)), data.get(4));
-                        models.add(new RecyclerCardProductsModel(product1));
-
-                        if (models.size() == product.size()) {
-                            recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-                            recyclerCardProductsAdapter = new RecyclerCardProductsAdapter(getContext(), models);
-                            recyclerView.setAdapter(recyclerCardProductsAdapter);
+                        if (product1.getType().contains("fruit")) {
+                            models.add(new RecyclerCardProductsModel(product1));
                         }
                     }
+                    recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2, LinearLayoutManager.VERTICAL, false));
+                    Collections.reverse(models);
+                    recyclerCardProductsAdapter = new RecyclerCardProductsAdapter(getContext(), models);
+                    recyclerView.setAdapter(recyclerCardProductsAdapter);
                 } else {
                     models  = new ArrayList<>();
                     Product product = new Product(0, "Apple", "This is apple", "apple.jpg", "Fruit", 100, "Kg");

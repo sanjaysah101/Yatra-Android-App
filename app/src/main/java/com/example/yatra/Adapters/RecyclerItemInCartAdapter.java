@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.yatra.R;
 import com.example.yatra.Models.RecyclerItemInCartModel;
 import com.example.yatra.Sqlite.SQLiteDbHelper;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,16 +46,17 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
 
         RecyclerItemInCartModel recyclerItemInCartModel = arrayList.get(position);
 
-        int unitPrice = recyclerItemInCartModel.getPrice();
-        int quantity = recyclerItemInCartModel.getQuantity();
+        int unitPrice = arrayList.get(position).getPrice();
+        int quantity = arrayList.get(position).getQuantity();
         int totalPrice = unitPrice * quantity;
         String priceString = new String(""+unitPrice+ " Rs | Total: " + totalPrice);
 
 
 //        holder.imageProduct.setImageResource(arrayList.get(position).getImg());
+        Picasso.get().load(arrayList.get(position).getImg()).resize(130,110).into(holder.imageProduct);
         holder.productTitle.setText(arrayList.get(position).getTitle());
-        holder.productPrice.setText(priceString);
-        holder.productQuantity.setText(""+quantity);
+        holder.productPrice.setText(""+arrayList.get(position).getPrice());
+        holder.productQuantity.setText(""+arrayList.get(position).getQuantity());
         holder.deliveryDate.setText(arrayList.get(position).getDeliveryDate());
         holder.deliveryMode.setText(arrayList.get(position).getDeliveryMode());
 
@@ -118,7 +120,9 @@ public class RecyclerItemInCartAdapter extends RecyclerView.Adapter<RecyclerItem
             public void onClick(View view) {
                 SQLiteDbHelper dbHelper = new SQLiteDbHelper(context);
                 dbHelper.deleteData(Integer.toString(arrayList.get(position).getId()));
-
+//                ArrayList<RecyclerItemInCartModel> arrayList = new ArrayList<>();
+                arrayList = dbHelper.readData(context);
+//                return arrayList;
                 notifyDataSetChanged();
             }
         });

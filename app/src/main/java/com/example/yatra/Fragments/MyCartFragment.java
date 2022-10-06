@@ -16,6 +16,7 @@ import com.example.yatra.R;
 import com.example.yatra.Sqlite.SQLiteDbHelper;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MyCartFragment extends Fragment {
 
@@ -31,7 +32,7 @@ public class MyCartFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_my_cart, container, false);
         RecyclerView recyclerViewMyItems = view.findViewById(R.id.recyclerViewMyItems);
-        recyclerViewMyItems.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerViewMyItems.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
 
         RecyclerItemInCartAdapter recyclerItemInCartAdapter = new RecyclerItemInCartAdapter(getContext(), myCartArrayList());
         recyclerViewMyItems.setAdapter(recyclerItemInCartAdapter);
@@ -40,6 +41,7 @@ public class MyCartFragment extends Fragment {
     private ArrayList<RecyclerItemInCartModel> myCartArrayList(){
         ArrayList<RecyclerItemInCartModel> arrayList = new ArrayList<>();
         arrayList = dbHelper.readData(getContext());
+        Collections.reverse(arrayList);
         return arrayList;
     }
 }

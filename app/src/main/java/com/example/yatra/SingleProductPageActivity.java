@@ -18,6 +18,11 @@ import android.widget.Toast;
 
 import com.example.yatra.Models.Product;
 import com.example.yatra.Sqlite.SQLiteDbHelper;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -43,6 +48,17 @@ public class SingleProductPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_single_product_page);
 
         initRating();
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+
+            }
+        });
+        AdView adView = findViewById(R.id.bannerAdView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        RewardAds.initRewardAd(this);
 //        Intent myCartActivityIntent = new Intent(this, MyCartActivity.class);
 //        Fragment fragment = new MyCartFragment();
 //        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -120,9 +136,26 @@ public class SingleProductPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dbHelper.addNewData(product.getName(), product.getImage(), Integer.parseInt(productQuantity.getText().toString()), product.getPrice());
+                Intent intent = new Intent(SingleProductPageActivity.this, DoneActivity.class);
                 Toast.makeText(SingleProductPageActivity.this, "Item added to cart", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(SingleProductPageActivity.this, DoneActivity.class));
-                finish();
+                intent.putExtra("title",product.getName());
+                intent.putExtra("quantity",productQuantity.getText().toString());
+                intent.putExtra("price",product.getPrice());
+
+                if (RewardAds.mRewardedAd != null) {
+                    RewardAds.showRewardAd(SingleProductPageActivity.this, new RewardAds.iReward() {
+                        @Override
+                        public void onResponse(boolean rewards) {
+                            if (rewards) {
+                                startNextActivity(intent);
+                            } else {
+                                startNextActivity(intent);
+                            }
+                        }
+                    });
+                } else {
+                    startNextActivity(intent);
+                }
             }
         });
         drawerLayout = findViewById(R.id.my_drawer_layout);
@@ -170,5 +203,10 @@ public class SingleProductPageActivity extends AppCompatActivity {
             }
             index++;
         }
+    }
+
+    private void startNextActivity(Intent intent) {
+        startActivity(intent);
+        finish();
     }
 }

@@ -304,7 +304,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/totalPrice" />
 
-
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/bannerAdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:adSize="BANNER"
+            android:layout_marginTop="11dp"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintTop_toBottomOf="@+id/addToCartBtn"
+            tools:layout_editor_absoluteX="11dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
     <com.google.android.material.navigation.NavigationView

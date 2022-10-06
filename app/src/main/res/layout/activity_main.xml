@@ -54,11 +54,20 @@
                 app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
         </RelativeLayout>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/bannerAdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:adSize="BANNER"
+            android:layout_marginTop="11dp"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            tools:layout_editor_absoluteX="11dp" />
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/bannerAdView"
             android:background="@color/primary"
             app:itemIconTint="@color/black"
             app:itemTextColor="@color/black"
@@ -72,7 +81,6 @@
             android:visibility="gone"/>
 
     </RelativeLayout>
-
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
