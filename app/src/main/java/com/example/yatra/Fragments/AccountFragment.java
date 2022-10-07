@@ -35,10 +35,14 @@ public class AccountFragment extends Fragment {
     }
 
 
-    public View onCreate(LayoutInflater inflater, ViewGroup container,
-                         Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        View view =  inflater.inflate(R.layout.fragment_home, container, false);
+
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view =  inflater.inflate(R.layout.fragment_account, container, false);
         Button logoutButton = view.findViewById(R.id.logoutButton);
         TextView uName = view.findViewById(R.id.uName);
         TextView userEmail = view.findViewById(R.id.userEmail);
@@ -59,6 +63,8 @@ public class AccountFragment extends Fragment {
                         dialogInterface.dismiss();
                     }
                 });
+                builder.create().show();
+//                Toast.makeText(getContext(), "hi", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -92,18 +98,9 @@ public class AccountFragment extends Fragment {
                 Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
-
-        return  view;
+        return view;
     }
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false);
-    }
-    private void logoutUser(){
+    public void logoutUser(){
 //      ##################   Logout Function #######################3
         FirebaseAuth.getInstance().signOut();
         Intent signInIntent = new Intent(getContext(), SignInActivity.class);

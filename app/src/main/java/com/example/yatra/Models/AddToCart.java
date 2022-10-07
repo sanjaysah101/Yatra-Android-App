@@ -1,27 +1,27 @@
 package com.example.yatra.Models;
 
 public class AddToCart {
-    private int quantity;
-    private Product product;
+    private int mQuantity;
+    private Product mProduct;
 
     public AddToCart(Product product, int quantity) {
-        this.quantity = quantity;
-        this.product = product;
+        this.mQuantity = quantity;
+        this.mProduct = product;
     }
 
     public int getQuantity() {
-        return quantity;
+        return mQuantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantity(int mQuantity) {
+        this.mQuantity = mQuantity;
     }
 
     public Product getProduct() {
-        return product;
+        return mProduct;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProduct(Product mProduct) {
+        this.mProduct = mProduct;
     }
 }
