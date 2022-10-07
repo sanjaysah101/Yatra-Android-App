@@ -38,19 +38,22 @@
                         android:id="@+id/tvName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginTop="50dp"
+                        android:fontFamily="@font/syne_bold"
+                        android:padding="6dp"
                         android:text="Fruits"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <Button
-                        android:backgroundTint="@color/primary"
-                        android:text="Buy Now"
-                        android:layout_marginStart="11dp"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/tvName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="11dp"
+                        android:backgroundTint="@color/primary"
+                        android:text="Buy Now" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 

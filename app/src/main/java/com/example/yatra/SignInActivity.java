@@ -38,6 +38,10 @@ public class SignInActivity extends AppCompatActivity {
     private final String TAG = "mainTag";
     private final int RESULT_CODE_SIGNIN = 999;
 
+
+    //String Url ="https://sanjay.rpme.website/AndroidApi/getUser.php";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -48,7 +48,7 @@
                 android:layout_gravity="end"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="Add item to cart"
-                app:srcCompat="@drawable/ic_favorite"
+                app:srcCompat="@drawable/red_heart"
                 tools:layout_editor_absoluteX="105dp"
                 tools:layout_editor_absoluteY="569dp" />
 
@@ -306,12 +306,13 @@
         <Button
             android:id="@+id/addToCartBtn"
             style="@style/Button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="202dp"
+            android:layout_height="49dp"
             android:layout_marginTop="48dp"
             android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
             android:drawableTint="@color/white"
             android:text="@string/btnAddToCart"
+            android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/totalPrice" />
