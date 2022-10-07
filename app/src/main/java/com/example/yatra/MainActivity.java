@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -20,6 +21,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.yatra.Adapters.ViewPagerAdapter;
+import com.example.yatra.Fragments.AboutFragment;
 import com.example.yatra.Fragments.AccountFragment;
 import com.example.yatra.Fragments.FavoriteFragment;
 import com.example.yatra.Fragments.FruitsFragment;
@@ -32,6 +34,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         ProgressBar progressBar = findViewById(R.id.progressBar);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         drawerLayout = findViewById(R.id.my_drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_bar);
         RelativeLayout rlMain = findViewById(R.id.rlMain);
         FrameLayout frameLayout = findViewById(R.id.homeFragment);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
@@ -164,6 +168,36 @@ public class MainActivity extends AppCompatActivity {
 
         // to make the Navigation drawer icon always appear on the action bar
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        // to perform event on menu item click
+        navigationView.setCheckedItem(R.id.nav_home);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (R.id.nav_home == item.getItemId()) {
+                    rlMain.setVisibility(View.GONE);
+                    frameLayout.setVisibility(View.VISIBLE);
+                    loadFrag(new HomeFragment());
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else if (R.id.nav_profile == item.getItemId()) {
+                    rlMain.setVisibility(View.GONE);
+                    frameLayout.setVisibility(View.VISIBLE);
+                    loadFrag(new AccountFragment());
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else if (R.id.nav_favorite == item.getItemId()) {
+                    rlMain.setVisibility(View.GONE);
+                    frameLayout.setVisibility(View.VISIBLE);
+                    loadFrag(new FavoriteFragment());
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else if (R.id.nav_about == item.getItemId()) {
+                    rlMain.setVisibility(View.GONE);
+                    frameLayout.setVisibility(View.VISIBLE);
+                    loadFrag(new AboutFragment());
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                return true;
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
