@@ -3,6 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_done.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_edit_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_enter_otp.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_enter_password.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_forget_password.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_password_reset_successfull.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_sign_in.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_signup.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/activity_single_product_page.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_about.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_account.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_dashboard.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_edit_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_favorite.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_fruits.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_home.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_my_cart.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_notifications.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_saved_address.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/fragment_single_product_page.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/grid_tems_list.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/nav_bar_image.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/single_favorite_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/RK University/Yatra/sanjay git/Yatra-Android-App/app/src/main/res/layout/single_item_in_cart.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/LOKRAJ SAH/Documents/Nayan Raj Shah/Yatra/Yatra-Android-App/app/src/main/res/layout/activity_main.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/LOKRAJ SAH/Documents/Nayan Raj Shah/Yatra/Yatra-Android-App/app/src/main/res/layout/activity_single_product_page.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/LOKRAJ SAH/Documents/Nayan Raj Shah/Yatra/Yatra-Android-App/app/src/main/res/layout/fragment_about.xml" value="0.21666666666666667" />

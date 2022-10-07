@@ -144,7 +144,7 @@
                     android:layout_height="140dp"
                     android:layout_marginVertical="10dp"
                     android:src="@drawable/shikat"
-                    app:shapeAppearanceOverlay="@style/roundimageview"/>
+                    app:shapeAppearanceOverlay="@style/roundimageview" />
 
                 <Button
                     android:id="@+id/imgChangeBtn"
