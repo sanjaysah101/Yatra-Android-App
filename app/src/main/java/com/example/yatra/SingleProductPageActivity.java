@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.yatra.Models.Product;
 import com.example.yatra.Sqlite.SQLiteDbHelper;
+import com.example.yatra.Sqlite.SQLiteFavoriteItemDbHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -35,7 +36,7 @@ public class SingleProductPageActivity extends AppCompatActivity {
     ImageView imageProduct;
     TextView productTitle, productPrice,productDescription, productQuantity, totalPrice;
     ImageButton rating1, rating2, rating3, rating4, rating5;
-    ImageButton removeProduct, addProduct;
+    ImageButton removeProduct, addProduct, addFavoriteItem;
     Button btnAddToCart;
     int totalProduct;
     List<ImageButton> ratingButtons = new ArrayList<ImageButton>();
@@ -73,7 +74,10 @@ public class SingleProductPageActivity extends AppCompatActivity {
         removeProduct = findViewById(R.id.removeProduct);
         productQuantity = findViewById(R.id.productQuantity);
         btnAddToCart = findViewById(R.id.addToCartBtn);
+        addFavoriteItem = findViewById(R.id.addFavoriteItem);
+
         SQLiteDbHelper dbHelper = new SQLiteDbHelper(this);
+        SQLiteFavoriteItemDbHelper sqLiteFavoriteItemDbHelper = new SQLiteFavoriteItemDbHelper(this);
 
 //        numberPickerQuantity.setMaxValue(10);
 //        numberPickerQuantity.setMinValue(1);
@@ -91,6 +95,33 @@ public class SingleProductPageActivity extends AppCompatActivity {
         productDescription.setText(product.getDescription());
         productPrice.setText(""+unitPrice+" Rs / " + unit);
 
+
+        addFavoriteItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqLiteFavoriteItemDbHelper.addNewData(product.getName(), product.getImage(), product.getPrice());
+                Intent intent = new Intent(SingleProductPageActivity.this, DoneActivity.class);
+                Toast.makeText(SingleProductPageActivity.this, "Item added to favorite List", Toast.LENGTH_SHORT).show();
+                intent.putExtra("title",product.getName());
+                intent.putExtra("quantity",productQuantity.getText().toString());
+                intent.putExtra("price",product.getPrice());
+
+                if (RewardAds.mRewardedAd != null) {
+                    RewardAds.showRewardAd(SingleProductPageActivity.this, new RewardAds.iReward() {
+                        @Override
+                        public void onResponse(boolean rewards) {
+                            if (rewards) {
+                                startNextActivity(intent);
+                            } else {
+                                startNextActivity(intent);
+                            }
+                        }
+                    });
+                } else {
+                    startNextActivity(intent);
+                }
+            }
+        });
 
         addProduct.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")

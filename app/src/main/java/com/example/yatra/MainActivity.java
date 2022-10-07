@@ -23,9 +23,11 @@ import android.widget.Toast;
 
 import com.example.yatra.Adapters.RecyclerCardProductsAdapter;
 import com.example.yatra.Adapters.ViewPagerAdapter;
+import com.example.yatra.Fragments.FavoriteFragment;
 import com.example.yatra.Fragments.FruitsFragment;
 import com.example.yatra.Fragments.HomeFragment;
 import com.example.yatra.Fragments.MyCartFragment;
+import com.example.yatra.Fragments.ProfileFragment;
 import com.example.yatra.Models.RecyclerCardProductsModel;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -43,6 +45,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout;
@@ -53,58 +56,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
-
-            }
-        });
-        AdView adView = findViewById(R.id.bannerAdView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-
-        ViewPager viewPager = findViewById(R.id.viewpager);
-        TabLayout tabLayout = findViewById(R.id.tab_layout);
-        ProgressBar progressBar = findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.GONE);
-
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.add(new HomeFragment(), "Vegetable");
-        viewPagerAdapter.add(new FruitsFragment(), "Fruits");
-
-        viewPager.setAdapter(viewPagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
-
-        RelativeLayout rlMain = findViewById(R.id.rlMain);
-        FrameLayout frameLayout = findViewById(R.id.homeFragment);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (R.id.bottom_nav_home == item.getItemId()){
-                    rlMain.setVisibility(View.VISIBLE);
-                    frameLayout.setVisibility(View.GONE);
-                    //loadFrag(new HomeFragment());
-                    progressBar.setVisibility(View.INVISIBLE);
-                }else if (R.id.bottom_nav_cart == item.getItemId()){
-                    progressBar.setVisibility(View.VISIBLE);
-                    rlMain.setVisibility(View.GONE);
-                    frameLayout.setVisibility(View.VISIBLE);
-                    loadFrag(new MyCartFragment());
-                    progressBar.setVisibility(View.INVISIBLE);
-                }else if (R.id.bottom_nav_favorite_list == item.getItemId()){
-                    progressBar.setVisibility(View.VISIBLE);
-                    Toast.makeText(MainActivity.this, "favorite clicked", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.INVISIBLE);
-                }else if (R.id.bottom_nav_my_Profile == item.getItemId()){
-                    progressBar.setVisibility(View.VISIBLE);
-                    Toast.makeText(MainActivity.this, "profile clicked", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.INVISIBLE);
-                }
-                return true;
-            }
-        });
-
+//        ############################### if user is not log in logout send to signInActivity  ########################
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser == null){
@@ -113,20 +65,21 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-//        TextView textViewUsername = findViewById(R.id.textView1);
-//        Button btnLogout = findViewById(R.id.btnLogout);
 
-
-
-//        btnLogout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                logoutUser();
-//            }
-//        });
+//        ############## Initialize variables #########################
+        AdView adView = findViewById(R.id.bannerAdView);
+        ViewPager viewPager = findViewById(R.id.viewpager);
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        ProgressBar progressBar = findViewById(R.id.progressBar);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+        drawerLayout = findViewById(R.id.my_drawer_layout);
+        RelativeLayout rlMain = findViewById(R.id.rlMain);
+        FrameLayout frameLayout = findViewById(R.id.homeFragment);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
+
         DatabaseReference reference = database.getReference("Users").child(currentUser.getUid());
 
+        //        ########################### Fetching User's Detail from Firebase ################################
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -146,7 +99,65 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
-        drawerLayout = findViewById(R.id.my_drawer_layout);
+
+
+//        ########################### Mobile Adds Start ##################################
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+
+            }
+        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+//        ########################### Mobile Adds End ##################################
+
+        progressBar.setVisibility(View.GONE);
+
+//        ####################### View page Starts Here ##############################
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.add(new HomeFragment(), "Vegetable");
+        viewPagerAdapter.add(new FruitsFragment(), "Fruits");
+
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
+
+//        ############################# Bottom Navigation Start #########################################
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (R.id.bottom_nav_home == item.getItemId()){
+                    rlMain.setVisibility(View.VISIBLE);
+                    frameLayout.setVisibility(View.GONE);
+                    //loadFrag(new HomeFragment());
+                    progressBar.setVisibility(View.INVISIBLE);
+                }else if (R.id.bottom_nav_cart == item.getItemId()){
+                    progressBar.setVisibility(View.VISIBLE);
+                    rlMain.setVisibility(View.GONE);
+                    frameLayout.setVisibility(View.VISIBLE);
+                    loadFrag(new MyCartFragment());
+                    progressBar.setVisibility(View.INVISIBLE);
+                }else if (R.id.bottom_nav_favorite_list == item.getItemId()){
+                    progressBar.setVisibility(View.VISIBLE);
+                    rlMain.setVisibility(View.GONE);
+                    frameLayout.setVisibility(View.VISIBLE);
+                    loadFrag(new FavoriteFragment());
+                    progressBar.setVisibility(View.INVISIBLE);
+                }else if (R.id.bottom_nav_my_Profile == item.getItemId()){
+                    progressBar.setVisibility(View.VISIBLE);
+                    rlMain.setVisibility(View.GONE);
+                    frameLayout.setVisibility(View.VISIBLE);
+                    loadFrag(new ProfileFragment());
+                    progressBar.setVisibility(View.INVISIBLE);
+                }
+                return true;
+            }
+        });
+
+        //        ############################# Bottom Navigation Start #########################################3
+
+
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
 
         // pass the Open and Close toggle for the drawer layout listener
@@ -155,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
         // to make the Navigation drawer icon always appear on the action bar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -165,7 +176,10 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
     private void logoutUser(){
+//      ##################   Logout Function #######################3
         FirebaseAuth.getInstance().signOut();
         Intent signInIntent = new Intent(this, SignInActivity.class);
         startActivity(signInIntent);
@@ -174,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void loadFrag(Fragment fragment){
+//        ########## Function to load Fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.homeFragment, fragment);

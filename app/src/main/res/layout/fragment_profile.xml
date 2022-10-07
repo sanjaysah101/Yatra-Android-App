@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.utils.widget.MotionLabel
+            android:layout_width="205dp"
+            android:layout_height="205dp"
+            android:layout_marginLeft="-105dp"
+            android:layout_marginTop="-70dp"
+            android:background="@drawable/ovalshape"
+            android:text="" />
+
+        <androidx.constraintlayout.utils.widget.MotionLabel
+            android:layout_width="205dp"
+            android:layout_height="205dp"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginTop="-135dp"
+            android:background="@drawable/ovalshape"
+            android:text="">
+        </androidx.constraintlayout.utils.widget.MotionLabel>
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="verdana"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/edit_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_title"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/layout_border">
+
+            <TextView
+                android:id="@+id/addHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="verdana"
+                android:text="Edit Profile"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgChangeLayout"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/editText_bg"
+                android:drawablePadding="20dp"
+                android:fontFamily="verdana"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textColorHint="@color/lightWhite"
+                android:textSize="18dp"
+                android:textStyle="normal"
+                tools:layout_editor_absoluteX="2dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address1"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/editText_bg"
+                android:drawablePadding="20dp"
+                android:fontFamily="verdana"
+                android:hint="Phone No"
+                android:inputType="phone"
+                android:padding="15dp"
+                android:textColorHint="@color/lightWhite"
+                android:textSize="18dp"
+                android:textStyle="normal"
+                tools:layout_editor_absoluteX="2dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address2"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/editText_bg"
+                android:drawablePadding="20dp"
+                android:fontFamily="verdana"
+                android:hint="Gmail ID"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textColorHint="@color/lightWhite"
+                android:textSize="18dp"
+                android:textStyle="normal"
+                tools:layout_editor_absoluteX="2dp" />
+
+            <LinearLayout
+                android:id="@+id/imgChangeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/addHeading"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/changeImg"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/shikat" />
+
+                <Button
+                    android:id="@+id/imgChangeBtn"
+                    android:layout_width="180dp"
+                    android:layout_height="39dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="4dp"
+                    android:text="Change Photo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_address"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_width="285dp"
+                android:layout_height="63dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/syne_bold"
+                android:padding="5dp"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_marginBottom="21dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

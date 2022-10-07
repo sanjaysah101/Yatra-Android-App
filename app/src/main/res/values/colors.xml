@@ -17,4 +17,11 @@
     <color name="btnColor2">#78A02E</color>
     <color name="deliveryColor">#5E8E04</color>
     <color name="textButton">#008000</color>
+
+    <color name="price_color">#5E8E04</color>
+    <color name="oval_color">#66F55D1C</color>
+    <color name="contact_shape">#F55D1C</color>
+    <color name="editText_bg">#D9D9D9</color>
+    <color name="border_color">#525252</color>
+
 </resources>

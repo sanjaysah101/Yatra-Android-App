@@ -41,28 +41,29 @@
                 android:maxHeight="300dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@drawable/broccoli" />
+
         </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/productTitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Broccoli"
             android:textColor="@color/black"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView"
-            app:layout_constraintVertical_bias="0.038" />
+            app:layout_constraintVertical_bias="0.03" />
 
         <LinearLayout
             android:id="@+id/reviewStars"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productTitle">
 
@@ -246,6 +247,19 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+
+        <Button
+            android:id="@+id/addFavoriteItem"
+            style="@style/Button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
+            android:drawableTint="@color/white"
+            android:text="Add to Favorite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addToCartBtn" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

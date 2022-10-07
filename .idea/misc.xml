@@ -37,6 +37,21 @@
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/menu/main_menu.xml" value="0.18982471141513468" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.181" />
         <entry key="..\:/Users/Sanjay Sah/AndroidStudioProjects/Yatra/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.104" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/drawable/bottom_background.xml" value="0.209" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.213" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.213" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.216" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/drawable/layout_border.xml" value="0.209" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/drawable/ovalshape.xml" value="0.1" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/activity_edit_profile.xml" value="0.176" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/activity_single_product_page.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/fragment_about.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/fragment_favorite.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/fragment_my_cart.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/fragment_single_product_page.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/single_favorite_item.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/Sanjay Sah/Desktop/Yatra-Android-App/app/src/main/res/layout/single_item_in_cart.xml" value="0.21458333333333332" />
       </map>
     </option>
   </component>

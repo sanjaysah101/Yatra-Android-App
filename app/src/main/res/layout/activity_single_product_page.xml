@@ -40,6 +40,18 @@
                 android:maxHeight="300dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@drawable/broccoli" />
+
+            <ImageButton
+                android:id="@+id/addFavoriteItem"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Add item to cart"
+                app:srcCompat="@drawable/ic_baseline_favorite_24"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_editor_absoluteY="569dp" />
+
         </androidx.cardview.widget.CardView>
 
         <TextView

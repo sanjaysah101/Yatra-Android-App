@@ -18,49 +18,52 @@
         android:theme="@style/Theme.Yatra"
         tools:targetApi="31">
         <activity
-            android:hardwareAccelerated="true"
-            android:name=".DoneActivity"
+            android:name=".EditProfileActivity"
             android:exported="false" />
         <activity
-            android:hardwareAccelerated="true"
+            android:name=".DoneActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
             android:name=".SingleProductPageActivity"
             android:exported="false"
+            android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:hardwareAccelerated="true"
             android:name=".PasswordResetSuccessfulActivity"
             android:exported="false"
+            android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:hardwareAccelerated="true"
             android:name=".EnterPasswordActivity"
             android:exported="false"
+            android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:hardwareAccelerated="true"
             android:name=".EnterOTPActivity"
             android:exported="false"
+            android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:hardwareAccelerated="true"
             android:name=".ForgetPasswordActivity"
             android:exported="false"
+            android:hardwareAccelerated="true"
             android:parentActivityName=".SignInActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:hardwareAccelerated="true"
             android:name=".SignupActivity"
             android:exported="false"
+            android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:hardwareAccelerated="true"
             android:name=".SignInActivity"
             android:exported="false"
+            android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:hardwareAccelerated="true"
             android:name=".MainActivity"
             android:exported="true"
+            android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Yatra.Starting">
             <intent-filter>
@@ -72,7 +75,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
 
 </manifest>
