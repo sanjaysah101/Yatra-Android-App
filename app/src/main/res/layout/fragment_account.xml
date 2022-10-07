@@ -60,12 +60,12 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
             <TextView
-                android:id="@+id/uPhone"
+                android:id="@+id/userEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="+918345XXXXXX"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
