@@ -48,7 +48,7 @@
                 android:layout_gravity="end"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="Add item to cart"
-                app:srcCompat="@drawable/ic_baseline_favorite_24"
+                app:srcCompat="@drawable/ic_favorite"
                 tools:layout_editor_absoluteX="105dp"
                 tools:layout_editor_absoluteY="569dp" />
 

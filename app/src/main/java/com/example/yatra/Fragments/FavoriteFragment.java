@@ -27,7 +27,7 @@ public class FavoriteFragment extends Fragment {
 
     //        ##################################### To be Changed ###############################################
 
-    //    SQLiteFavoriteItemDbHelper dbHelper = new SQLiteFavoriteItemDbHelper(getContext());
+//        SQLiteFavoriteItemDbHelper dbHelper = new SQLiteFavoriteItemDbHelper(getContext());
         SQLiteDbHelper dbHelper = new SQLiteDbHelper(getContext());
 
 
@@ -44,16 +44,16 @@ public class FavoriteFragment extends Fragment {
 //
 //        ##################################### To be Changed ###############################################
 
-        RecyclerItemInCartAdapter recyclerFavoriteItemAdapter = new RecyclerItemInCartAdapter(getContext(), myFavoriteArrayList());
-//        RecyclerFavoriteItemAdapter recyclerFavoriteItemAdapter = new RecyclerFavoriteItemAdapter(getContext(), myFavoriteArrayList());
+//        RecyclerItemInCartAdapter recyclerFavoriteItemAdapter = new RecyclerItemInCartAdapter(getContext(), myFavoriteArrayList());
+        RecyclerFavoriteItemAdapter recyclerFavoriteItemAdapter = new RecyclerFavoriteItemAdapter(getContext(), myFavoriteArrayList());
         recyclerViewMyItems.setAdapter(recyclerFavoriteItemAdapter);
         return view;
     }
 
-    private ArrayList<RecyclerItemInCartModel> myFavoriteArrayList() {
+    private ArrayList<RecyclerFavoriteItemModel> myFavoriteArrayList() {
 
-        ArrayList<RecyclerItemInCartModel> arrayList;
-        arrayList = dbHelper.readData(getContext());
+        ArrayList<RecyclerFavoriteItemModel> arrayList;
+        arrayList = dbHelper.readFavData(getContext());
         Collections.reverse(arrayList);
         return arrayList;
 

@@ -77,7 +77,7 @@ public class SingleProductPageActivity extends AppCompatActivity {
         addFavoriteItem = findViewById(R.id.addFavoriteItem);
 
         SQLiteDbHelper dbHelper = new SQLiteDbHelper(this);
-        SQLiteFavoriteItemDbHelper sqLiteFavoriteItemDbHelper = new SQLiteFavoriteItemDbHelper(this);
+//        SQLiteFavoriteItemDbHelper sqLiteFavoriteItemDbHelper = new SQLiteFavoriteItemDbHelper(this);
 
 //        numberPickerQuantity.setMaxValue(10);
 //        numberPickerQuantity.setMinValue(1);
@@ -99,7 +99,7 @@ public class SingleProductPageActivity extends AppCompatActivity {
         addFavoriteItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sqLiteFavoriteItemDbHelper.addNewData(product.getName(), product.getImage(), product.getPrice());
+                dbHelper.addFavData(product.getName(), product.getImage(), product.getPrice());
                 Intent intent = new Intent(SingleProductPageActivity.this, DoneActivity.class);
                 Toast.makeText(SingleProductPageActivity.this, "Item added to favorite List", Toast.LENGTH_SHORT).show();
                 intent.putExtra("title",product.getName());

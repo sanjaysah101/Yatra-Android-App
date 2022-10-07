@@ -83,10 +83,11 @@ public class RecyclerFavoriteItemAdapter extends RecyclerView.Adapter<RecyclerFa
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View view) {
-                SQLiteFavoriteItemDbHelper dbHelper = new SQLiteFavoriteItemDbHelper(context);
-                dbHelper.deleteData(Integer.toString(arrayList.get(position).getId()));
-                ArrayList<RecyclerFavoriteItemModel> arrayList = new ArrayList<>();
-                arrayList = dbHelper.readData(context);
+                SQLiteDbHelper dbHelper = new SQLiteDbHelper(context);
+                dbHelper.deleteFavData(Integer.toString(arrayList.get(position).getId()));
+                ArrayList<RecyclerFavoriteItemModel> new_arrayList = new ArrayList<>();
+                new_arrayList = dbHelper.readFavData(context);
+                arrayList = new_arrayList;
 //                return arrayList;
                 notifyDataSetChanged();
             }

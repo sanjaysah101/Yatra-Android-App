@@ -14,7 +14,7 @@ import com.example.yatra.Models.RecyclerItemInCartModel;
 import java.util.ArrayList;
 
 public class SQLiteFavoriteItemDbHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "cartData";
+    public static final String DATABASE_NAME = "favorite";
     public static final String TABLE_NAME = "favoriteTable";
     public static final String ID = "id";
     public static final String NAME = "name";

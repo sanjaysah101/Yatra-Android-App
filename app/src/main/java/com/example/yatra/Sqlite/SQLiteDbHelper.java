@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 import com.example.yatra.Models.Product;
+import com.example.yatra.Models.RecyclerFavoriteItemModel;
 import com.example.yatra.Models.RecyclerItemInCartModel;
 
 import java.util.ArrayList;
@@ -22,25 +23,35 @@ public class SQLiteDbHelper extends SQLiteOpenHelper {
     public static final String QUANTITY = "quantity";
     public static final String PRICE = "price";
 
+    public static final String FAV_TABLE_NAME = "favoriteTable";
+
     public SQLiteDbHelper(@Nullable Context context) {
-        super(context, TABLE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String query = "CREATE TABLE " + TABLE_NAME + " ("
+        String query1 = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + NAME + " TEXT,"
                 + IMAGE + " TEXT,"
                 + QUANTITY + " INTEGER,"
                 + PRICE + " INTEGER)";
 
-        sqLiteDatabase.execSQL(query);
+        String query2 = "CREATE TABLE " + FAV_TABLE_NAME + " ("
+                + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + NAME + " TEXT,"
+                + IMAGE + " TEXT,"
+                + PRICE + " INTEGER)";
+
+        sqLiteDatabase.execSQL(query1);
+        sqLiteDatabase.execSQL(query2);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + FAV_TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
 
@@ -60,6 +71,25 @@ public class SQLiteDbHelper extends SQLiteOpenHelper {
         // after adding all values we are passing
         // content values to our table.
         db.insert(TABLE_NAME, null, values);
+
+        db.close();
+    }
+
+    public void addFavData(String name, String image, Integer price) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        // on below line we are passing all values
+        // along with its key and value pair.
+        values.put(NAME, name);
+        values.put(IMAGE, image);
+        values.put(PRICE, price);
+
+        // after adding all values we are passing
+        // content values to our table.
+        db.insert(FAV_TABLE_NAME, null, values);
 
         db.close();
     }
@@ -98,6 +128,40 @@ public class SQLiteDbHelper extends SQLiteOpenHelper {
         return ProductArrayList;
     }
 
+    public ArrayList<RecyclerFavoriteItemModel> readFavData(Context context) {
+        // on below line we are creating a
+        // database for reading our database.
+        SQLiteDbHelper dbHelper = new SQLiteDbHelper(context);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        // on below line we are creating a cursor with query to read data from database.
+        Cursor cursorCourses = db.rawQuery("SELECT * FROM " + FAV_TABLE_NAME, null);
+
+        // on below line we are creating a new array list.
+        ArrayList<RecyclerFavoriteItemModel> ProductArrayList = new ArrayList<>();
+
+        // moving our cursor to first position.
+        if (cursorCourses != null) {
+            if (cursorCourses.moveToFirst()) {
+                do {
+                    // on below line we are adding the data from cursor to our array list.
+                    ProductArrayList.add(new RecyclerFavoriteItemModel(cursorCourses.getInt(0),
+                            cursorCourses.getString(1),
+                            cursorCourses.getString(2),
+                            cursorCourses.getInt(3)));
+                } while (cursorCourses.moveToNext());
+                // moving our cursor to next.
+            }
+            cursorCourses.close();
+        }else {
+            return null;
+        }
+        // at last closing our cursor
+        // and returning our array list.
+
+        return ProductArrayList;
+    }
+
     public void deleteData(String id) {
 
         // on below line we are creating
@@ -107,6 +171,18 @@ public class SQLiteDbHelper extends SQLiteOpenHelper {
         // on below line we are calling a method to delete our
         // course and we are comparing it with our course name.
         db.delete(TABLE_NAME, "id=?", new String[]{id});
+        db.close();
+    }
+
+    public void deleteFavData(String id) {
+
+        // on below line we are creating
+        // a variable to write our database.
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // on below line we are calling a method to delete our
+        // course and we are comparing it with our course name.
+        db.delete(FAV_TABLE_NAME, "id=?", new String[]{id});
         db.close();
     }
 
