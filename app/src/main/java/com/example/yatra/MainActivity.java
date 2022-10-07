@@ -8,8 +8,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -21,14 +19,13 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.yatra.Adapters.RecyclerCardProductsAdapter;
 import com.example.yatra.Adapters.ViewPagerAdapter;
+import com.example.yatra.Fragments.AccountFragment;
 import com.example.yatra.Fragments.FavoriteFragment;
 import com.example.yatra.Fragments.FruitsFragment;
 import com.example.yatra.Fragments.HomeFragment;
 import com.example.yatra.Fragments.MyCartFragment;
-import com.example.yatra.Fragments.ProfileFragment;
-import com.example.yatra.Models.RecyclerCardProductsModel;
+import com.example.yatra.Fragments.EditProfileFragment;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -44,7 +41,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -148,8 +144,9 @@ public class MainActivity extends AppCompatActivity {
                     progressBar.setVisibility(View.VISIBLE);
                     rlMain.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
-                    loadFrag(new ProfileFragment());
+                    loadFrag(new AccountFragment());
                     progressBar.setVisibility(View.INVISIBLE);
+                    Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
                 }
                 return true;
             }

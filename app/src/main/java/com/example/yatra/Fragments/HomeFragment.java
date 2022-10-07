@@ -3,6 +3,7 @@ package com.example.yatra.Fragments;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -14,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.yatra.Adapters.RecyclerCardProductsAdapter;
@@ -48,15 +50,18 @@ public class HomeFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView = view.findViewById(R.id.recyclerCardProducts);
         searchView = view.findViewById(R.id.searchView);
+        ImageView imageView = view.findViewById(R.id.imageView3);
+
         showProgressDialog();
         ProductRetrofit.getProductData(new Callback<RetrofitModel>() {
             @Override
-            public void onResponse(Call<RetrofitModel> call, Response<RetrofitModel> response) {
+            public void onResponse(@NonNull Call<RetrofitModel> call, @NonNull Response<RetrofitModel> response) {
                 if (response.code() == 200) {
                     Log.d("TAG", "onResponse: " + response.body());
 
                     models = new ArrayList<>();
                     RetrofitModel retrofitModel = response.body();
+                    assert retrofitModel != null;
                     List<List<String>> product = retrofitModel.getData();
                     for (int i = 0; i < product.size(); i++) {
                         List<String> data = product.get(i);

@@ -32,17 +32,17 @@
                         android:adjustViewBounds="true"
                         android:maxHeight="300dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/tomato" />
+                        android:src="@drawable/fruits" />
 
                     <TextView
                         android:id="@+id/tvName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
                         android:layout_marginStart="20dp"
-                        android:text="Tomato"
-                        android:textSize="20sp"
-                        android:textColor="@color/white"/>
+                        android:layout_marginTop="50dp"
+                        android:text="Fruits"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
 
                     <Button
                         android:backgroundTint="@color/primary"
