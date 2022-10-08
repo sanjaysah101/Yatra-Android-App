@@ -44,6 +44,9 @@ A goal of supply chain management is to improve efficiency by coordinating the e
 
 ## Document Conventions
 
+<a href="https://www.figma.com/file/mI1bfsEuGJAbm4ZrXIr9XL/Yatra">See Wire Frames </a>
+
+
 Times New Roman font has been used with a font size of 12 as the standard or typographical convention while typing this SRS.
 
 ##	Intended Audience and Reading Suggestions
@@ -166,6 +169,40 @@ The system interface will look like following:
 
 ##	Software Interfaces
 
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Menomonics</th>
+    <th>Version</th>
+    <th>Source</th>
+  </tr>
+  <tr>
+    <td>Fire Base</td>
+    <td>FB</td>
+    <td>30.4.1</td>
+    <td>https://firebase.google.com/support/release-notes/android#latest_sdk_versions</td>
+  </tr>
+  <tr>
+    <td>Android Studio</td>
+    <td>AS</td>
+    <td>2.1.16</td>
+    <td>https://developer.android.com/studio</td>
+  </tr>
+  <tr>
+    <td>SQL Lite</td>
+    <td>SQL Lite</td>
+    <td>3.39.3</td>
+    <td>https://www.sqlite.org/download.html</td>
+  </tr>
+  <tr>
+    <td>Java</td>
+    <td>Java</td>
+    <td>8.0</td>
+    <td>https://www.java.com/en/download/help/version_manual.html</td>
+  </tr>
+</table>
+
+<br>
 
 
 
