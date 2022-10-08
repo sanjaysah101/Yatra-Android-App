@@ -4,14 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="11dp">
+    tools:context=".MainActivity">
 
+    <androidx.constraintlayout.utils.widget.MotionLabel
+        android:layout_width="205dp"
+        android:layout_height="205dp"
+        android:layout_marginLeft="-105dp"
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/ovalshape"
+        android:text="">
+    </androidx.constraintlayout.utils.widget.MotionLabel>
+
+    <androidx.constraintlayout.utils.widget.MotionLabel
+        android:layout_width="205dp"
+        android:layout_height="205dp"
+        android:layout_marginLeft="-30dp"
+        android:layout_marginTop="-135dp"
+        android:background="@drawable/ovalshape"
+        android:text="">
+    </androidx.constraintlayout.utils.widget.MotionLabel>
+
+    <TextView
+        android:id="@+id/favorite_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="verdana"
+        android:gravity="center"
+        android:text="Favorite List"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewFavoriteItems"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/favorite_title"
         android:layout_marginBottom="80dp" />
 
     <androidx.cardview.widget.CardView
@@ -48,8 +80,8 @@
             <Button
                 android:id="@+id/button2"
                 style="@style/Button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
                 android:layout_marginEnd="16dp"
                 android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
                 android:text="Place Order"

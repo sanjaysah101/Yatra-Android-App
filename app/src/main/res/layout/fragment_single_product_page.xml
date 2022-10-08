@@ -4,264 +4,290 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="11dp"
+
     tools:context=".SingleProductPageActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 <!--    <FrameLayout-->
 <!--        android:id="@+id/frameLayout"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"/>-->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="40dp">
+        <androidx.constraintlayout.utils.widget.MotionLabel
+            android:layout_width="205dp"
+            android:layout_height="205dp"
+            android:layout_marginLeft="-105dp"
+            android:layout_marginTop="-70dp"
+            android:background="@drawable/ovalshape"
+            android:text="">
+        </androidx.constraintlayout.utils.widget.MotionLabel>
 
+        <androidx.constraintlayout.utils.widget.MotionLabel
+            android:layout_width="205dp"
+            android:layout_height="205dp"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginTop="-135dp"
+            android:background="@drawable/ovalshape"
+            android:text="">
+        </androidx.constraintlayout.utils.widget.MotionLabel>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:elevation="11dp"
-            app:cardCornerRadius="10dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:paddingBottom="40dp">
 
 
-            <ImageView
-                android:id="@+id/imageProduct"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:contentDescription="Image Description"
-                android:maxHeight="300dp"
-                android:scaleType="centerCrop"
-                tools:srcCompat="@drawable/broccoli" />
+                android:layout_height="338dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="30dp"
+                android:elevation="11dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
 
-        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/productTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Broccoli"
-            android:textColor="@color/black"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView"
-            app:layout_constraintVertical_bias="0.03" />
+                <ImageView
+                    android:id="@+id/imageProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Image Description"
+                    android:maxHeight="300dp"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@drawable/broccoli" />
 
-        <LinearLayout
-            android:id="@+id/reviewStars"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productTitle">
+            </androidx.cardview.widget.CardView>
 
-            <ImageButton
-                android:id="@+id/rating1"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="Rating 1"
-                android:tag="1"
-                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
-
-            <ImageButton
-                android:id="@+id/rating2"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="Rating 2"
-                android:tag="2"
-                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
-
-            <ImageButton
-                android:id="@+id/rating3"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="Rating 3"
-                android:tag="3"
-                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
-
-            <ImageButton
-                android:id="@+id/rating4"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="Rating 4"
-                android:tag="4"
-                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
-
-            <ImageButton
-                android:id="@+id/rating5"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="Rating 5"
-                android:tag="5"
-                app:srcCompat="@drawable/ic_baseline_star_outline_24" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/productDescriptionTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Description"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/reviewStars"
-            app:layout_constraintVertical_bias="0.038" />
-
-        <TextView
-            android:id="@+id/productDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Description is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration."
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productDescriptionTitle"
-            app:layout_constraintVertical_bias="0.038" />
-
-        <TextView
-            android:id="@+id/productPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="45 Rs"
-            android:textColor="@color/black"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.959"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productDescription"
-            app:layout_constraintVertical_bias="0.204" />
-
-        <!--        <NumberPicker-->
-        <!--            android:id="@+id/numberPickerQantity"-->
-        <!--            android:layout_width="145dp"-->
-        <!--            android:layout_height="68dp"-->
-        <!--            android:layout_marginBottom="4dp"-->
-        <!--            app:layout_constraintBottom_toTopOf="@+id/button"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/productPrice"-->
-        <!--            app:layout_constraintHorizontal_bias="0.116"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/productDescription">-->
-
-        <!--        </NumberPicker>-->
-
-        <!--        <LinearLayout-->
-        <!--            android:id="@+id/numberPickerQantity"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:layout_constraintBottom_toTopOf="@+id/button"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/productPrice"-->
-        <!--            app:layout_constraintHorizontal_bias="0.116"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/productDescription"-->
-        <!--            android:background="@color/btnColor"-->
-        <!--            -->
-        <!--            android:gravity="center"-->
-        <!--            android:orientation="horizontal">-->
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:elevation="11dp"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/addToCartBtn"
-            app:layout_constraintEnd_toStartOf="@+id/productPrice"
-            app:layout_constraintHorizontal_bias="0.116"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productDescription">
+            <TextView
+                android:id="@+id/productTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Broccoli"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:layout_constraintVertical_bias="0.03" />
 
             <LinearLayout
+                android:id="@+id/reviewStars"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/btnColor"
-                android:gravity="center">
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productTitle">
 
                 <ImageButton
-                    android:id="@+id/removeProduct"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
+                    android:id="@+id/rating1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:contentDescription="Remove item from Cart"
-                    app:srcCompat="@drawable/ic_baseline_remove_24"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="569dp" />
-
-                <TextView
-                    android:id="@+id/productQuantity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="11dp"
-                    android:layout_marginEnd="11dp"
-                    android:text="1"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
+                    android:contentDescription="Rating 1"
+                    android:tag="1"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
 
                 <ImageButton
-                    android:id="@+id/addProduct"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
+                    android:id="@+id/rating2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:backgroundTint="#00FFFFFF"
-                    android:contentDescription="Add item to cart"
-                    app:srcCompat="@drawable/ic_baseline_add_24"
-                    tools:layout_editor_absoluteX="105dp"
-                    tools:layout_editor_absoluteY="569dp" />
+                    android:contentDescription="Rating 2"
+                    android:tag="2"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
+                <ImageButton
+                    android:id="@+id/rating3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Rating 3"
+                    android:tag="3"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
+                <ImageButton
+                    android:id="@+id/rating4"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Rating 4"
+                    android:tag="4"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
+                <ImageButton
+                    android:id="@+id/rating5"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Rating 5"
+                    android:tag="5"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/productDescriptionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reviewStars"
+                app:layout_constraintVertical_bias="0.038" />
+
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration."
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productDescriptionTitle"
+                app:layout_constraintVertical_bias="0.038" />
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45 Rs"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.959"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productDescription"
+                app:layout_constraintVertical_bias="0.204" />
+
+            <!--        <NumberPicker-->
+            <!--            android:id="@+id/numberPickerQantity"-->
+            <!--            android:layout_width="145dp"-->
+            <!--            android:layout_height="68dp"-->
+            <!--            android:layout_marginBottom="4dp"-->
+            <!--            app:layout_constraintBottom_toTopOf="@+id/button"-->
+            <!--            app:layout_constraintEnd_toStartOf="@+id/productPrice"-->
+            <!--            app:layout_constraintHorizontal_bias="0.116"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/productDescription">-->
+
+            <!--        </NumberPicker>-->
+
+            <!--        <LinearLayout-->
+            <!--            android:id="@+id/numberPickerQantity"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            app:layout_constraintBottom_toTopOf="@+id/button"-->
+            <!--            app:layout_constraintEnd_toStartOf="@+id/productPrice"-->
+            <!--            app:layout_constraintHorizontal_bias="0.116"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/productDescription"-->
+            <!--            android:background="@color/btnColor"-->
+            <!--            -->
+            <!--            android:gravity="center"-->
+            <!--            android:orientation="horizontal">-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:elevation="11dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/addToCartBtn"
+                app:layout_constraintEnd_toStartOf="@+id/productPrice"
+                app:layout_constraintHorizontal_bias="0.116"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productDescription">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/btnColor"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/removeProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:backgroundTint="#00FFFFFF"
+                        android:contentDescription="Remove item from Cart"
+                        app:srcCompat="@drawable/ic_baseline_remove_24"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="569dp" />
+
+                    <TextView
+                        android:id="@+id/productQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginEnd="11dp"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/addProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:backgroundTint="#00FFFFFF"
+                        android:contentDescription="Add item to cart"
+                        app:srcCompat="@drawable/ic_baseline_add_24"
+                        tools:layout_editor_absoluteX="105dp"
+                        tools:layout_editor_absoluteY="569dp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
-        <!--        </LinearLayout>-->
+            <!--        </LinearLayout>-->
 
-        <Button
-            android:id="@+id/addToCartBtn"
-            style="@style/Button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
-            android:drawableTint="@color/white"
-            android:text="@string/btnAddToCart"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+            <Button
+                android:id="@+id/addToCartBtn"
+                style="@style/Button1"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="40dp"
+                android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
+                android:drawableTint="@color/white"
+                android:text="@string/btnAddToCart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productPrice" />
 
-        <Button
-            android:id="@+id/addFavoriteItem"
-            style="@style/Button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
-            android:drawableTint="@color/white"
-            android:text="Add to Favorite"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addToCartBtn" />
+            <Button
+                android:id="@+id/addFavoriteItem"
+                style="@style/Button1"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="4dp"
+                android:drawableLeft="@drawable/heart_icon"
+                android:drawableTint="@color/white"
+                android:text="Add to Favorite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addToCartBtn" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
 </ScrollView>

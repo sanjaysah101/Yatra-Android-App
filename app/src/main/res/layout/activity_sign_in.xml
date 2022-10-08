@@ -6,10 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".SignInActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.utils.widget.MotionLabel
+        android:layout_width="205dp"
+        android:layout_height="205dp"
+        android:layout_marginLeft="-105dp"
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/ovalshape"
+        android:text="">
+    </androidx.constraintlayout.utils.widget.MotionLabel>
+
+    <androidx.constraintlayout.utils.widget.MotionLabel
+        android:layout_width="205dp"
+        android:layout_height="205dp"
+        android:layout_marginLeft="-30dp"
+        android:layout_marginTop="-135dp"
+        android:background="@drawable/ovalshape"
+        android:text="">
+    </androidx.constraintlayout.utils.widget.MotionLabel>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/sign_in">
+        android:layout_height="wrap_content">
 
 
         <TextView
@@ -241,5 +262,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </RelativeLayout>
 </ScrollView>
