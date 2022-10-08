@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <RelativeLayout
+        android:id="@+id/rlMan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -99,6 +100,7 @@
                     android:background="@drawable/order_icon" />
 
                 <TextView
+                    android:id="@+id/orders"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
@@ -126,6 +128,7 @@
                     android:background="@drawable/heart_icon" />
 
                 <TextView
+                    android:id="@+id/favoriteList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
@@ -154,6 +157,7 @@
                     android:background="@drawable/helpcenter_icon" />
 
                 <TextView
+                    android:id="@+id/helpCenter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
@@ -208,6 +212,7 @@
                     android:background="@drawable/profile" />
 
                 <TextView
+                    android:id="@+id/editProfile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
@@ -239,6 +244,7 @@
                     android:background="@drawable/location" />
 
                 <TextView
+                    android:id="@+id/editAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"

@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.example.yatra.R;
 
+import java.util.Objects;
+
 public class AboutFragment extends Fragment {
 
 
@@ -17,6 +19,7 @@ public class AboutFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
     }
 
