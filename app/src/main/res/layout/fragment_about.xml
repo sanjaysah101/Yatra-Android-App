@@ -49,7 +49,8 @@
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/shikat">
+                android:src="@drawable/shikat"
+                app:shapeAppearanceOverlay="@style/imagecorner">
 
             </com.google.android.material.imageview.ShapeableImageView>
 
@@ -182,7 +183,8 @@
                 android:layout_marginEnd="5dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/bibek">
+                android:src="@drawable/bibek"
+                app:shapeAppearanceOverlay="@style/imagecorner">
 
             </com.google.android.material.imageview.ShapeableImageView>
 
@@ -314,7 +316,8 @@
                 android:layout_marginEnd="5dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/sanjay">
+                android:src="@drawable/sanjay"
+                app:shapeAppearanceOverlay="@style/imagecorner">
 
             </com.google.android.material.imageview.ShapeableImageView>
 
@@ -446,7 +449,8 @@
                 android:layout_marginEnd="5dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/dheeraj">
+                android:src="@drawable/dheeraj"
+                app:shapeAppearanceOverlay="@style/imagecorner">
 
             </com.google.android.material.imageview.ShapeableImageView>
 

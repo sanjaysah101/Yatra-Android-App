@@ -19,7 +19,7 @@
         android:layout_marginTop="92dp"
         android:text="@string/__p__sign_up_string"
         android:textColor="@color/__p__sign_in_color"
-        android:textSize="26sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="@font/poppins_bold"
         app:layout_constraintEnd_toEndOf="parent"

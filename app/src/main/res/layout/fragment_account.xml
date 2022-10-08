@@ -58,7 +58,7 @@
                 android:fontFamily="@font/poppins_bold"
                 android:text="Eftakhar Mahmud Shikat"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="26sp"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/userEmail"

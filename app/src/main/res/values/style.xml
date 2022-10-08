@@ -7,4 +7,11 @@
         <item name="strokeWidth">2dp</item>
     </style>
 
+    <style name="imagecorner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+        <item name="color">@color/black</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
 </resources>
