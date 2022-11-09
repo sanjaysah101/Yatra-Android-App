@@ -46,50 +46,6 @@
         android:layout_below="@+id/favorite_title"
         android:layout_marginBottom="80dp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewTotalContainer"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:elevation="11dp"
-        app:cardCornerRadius="11dp"
-        app:cardPreventCornerOverlap="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_alignParentBottom="true"
-        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/btnColor">
-
-            <TextView
-                android:id="@+id/totalPriceTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total 110 Rs"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/button2"
-                style="@style/Button1"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="16dp"
-                android:drawableLeft="@drawable/ic_baseline_shopping_cart_checkout_24"
-                android:text="Place Order"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

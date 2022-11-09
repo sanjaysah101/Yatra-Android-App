@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DoneActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
 
     <androidx.constraintlayout.utils.widget.MotionLabel
         android:layout_width="205dp"
@@ -26,7 +30,7 @@
 
     </androidx.constraintlayout.utils.widget.MotionLabel>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -77,7 +81,7 @@
             android:id="@+id/goToHome"
             android:layout_width="196dp"
             android:layout_height="44dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="100dp"
             android:text="Go To Home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -85,8 +89,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/message"
             app:layout_constraintVertical_bias="0.0" />
-    </LinearLayout>
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
+
+</ScrollView>

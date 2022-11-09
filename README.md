@@ -47,6 +47,7 @@ A goal of supply chain management is to improve efficiency by coordinating the e
 <a href="https://www.figma.com/file/mI1bfsEuGJAbm4ZrXIr9XL/Yatra">See Wire Frames </a>
 
 
+
 Times New Roman font has been used with a font size of 12 as the standard or typographical convention while typing this SRS.
 
 ##	Intended Audience and Reading Suggestions

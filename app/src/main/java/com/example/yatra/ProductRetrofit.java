@@ -13,7 +13,7 @@ public class ProductRetrofit {
     public static Retrofit getRetrofit() {
         if (retrofit == null) {
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://sanjay.rpme.website/Yatra%20Api/")
+                .baseUrl("https://visionnewspoint.com/Yatra/Yatra%20Api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         return retrofit;
