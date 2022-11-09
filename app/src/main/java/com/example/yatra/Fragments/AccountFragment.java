@@ -132,7 +132,7 @@ public class AccountFragment extends Fragment {
 
                 User user = snapshot.getValue(User.class);
                 if(user != null){
-                    userName.setText(user.getFname());
+                    userName.setText(user.getFname()+" "+user.getLname());
                     userEmail.setText(user.getEmail());
                 }
 
