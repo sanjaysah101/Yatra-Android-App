@@ -43,9 +43,9 @@
         android:id="@+id/recyclerViewMyItems"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="15dp"
         android:layout_below="@+id/cart_title"
-        android:layout_marginBottom="80dp" />
+        android:layout_marginBottom="80dp"
+        android:padding="15dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewTotalContainer"

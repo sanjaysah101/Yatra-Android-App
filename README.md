@@ -58,6 +58,54 @@ This document is intended for the developers, project managers, users, testers, 
 
 This document represents specification of the SCM system requirements. It serves as the baseline document on which the subsequent software development life cycle phases are built.
 
+<a href="https://www.figma.com/file/mI1bfsEuGJAbm4ZrXIr9XL/Yatra">See Wire Frames </a>
+
+<img src="https://drive.google.com/file/d/1c2oDSVzZBUJfob_c2Jnaq0ubhMA1vISn/view?usp=sharing" />
+
+
+# Android App View
+
+
+![Forgot pass 2](https://user-images.githubusercontent.com/90146483/194680615-8bd66514-4dd7-48ae-b793-f6da2a57865e.png)
+![Forgot pass 3](https://user-images.githubusercontent.com/90146483/194680616-0b94439e-d5b7-460c-bd82-fa3af9c95afb.png)
+![Forgot pass](https://user-images.githubusercontent.com/90146483/194680617-ecfbb1c8-c3b7-4c40-a29e-dc1df2432f31.png)
+![Home](https://user-images.githubusercontent.com/90146483/194680618-3d03398f-b2d0-4e9b-9af4-b8fdae7fdfd1.png)
+![Menu](https://user-images.githubusercontent.com/90146483/194680621-e2b5c30c-30db-4424-89da-88a0c407562c.png)
+![Payment 2](https://user-images.githubusercontent.com/90146483/194680622-70aed766-c3e2-4582-b272-010eb04bcc6d.png)
+![Payment 3](https://user-images.githubusercontent.com/90146483/194680624-a6ad2940-ad14-4a22-9e64-8f3cc771735b.png)
+![Payment](https://user-images.githubusercontent.com/90146483/194680626-c8f9ad99-4875-4dfc-8351-4c25b7720462.png)
+![Product 1 g](https://user-images.githubusercontent.com/90146483/194680627-6a567270-3bed-4ff1-82fb-fe9146253e79.png)
+![Product 1](https://user-images.githubusercontent.com/90146483/194680628-9e71bccc-ffc7-49bf-919f-11def81a2162.png)
+![Saved Address](https://user-images.githubusercontent.com/90146483/194680629-c4745342-8a4e-4784-a484-7ed8f08559a7.png)
+![Search](https://user-images.githubusercontent.com/90146483/194680631-af2c0b19-fcf0-493f-bd51-ada967e5001b.png)
+![Sign In](https://user-images.githubusercontent.com/90146483/194680632-61490f00-1fb7-403b-a92d-1fd9cae9983b.png)
+![Sign Up](https://user-images.githubusercontent.com/90146483/194680633-b7da33ef-619d-4341-9821-94ac20d2ddb1.png)
+![Splash](https://user-images.githubusercontent.com/90146483/194680634-f35b1d7a-e2b4-4a77-b8f5-bcede29532c9.png)
+![Summary](https://user-images.githubusercontent.com/90146483/194680635-a94b52e1-b0a4-4be7-9447-ffe164a1c297.png)
+![About us](https://user-images.githubusercontent.com/90146483/194680636-fb2c3836-9e4c-434c-8439-85e7edf79c51.png)
+![Account](https://user-images.githubusercontent.com/90146483/194680638-b4f0a50d-8bd4-4c8e-bdb8-31dde0732d78.png)
+![Address](https://user-images.githubusercontent.com/90146483/194680640-72a92fae-97e6-4e6b-a78f-cb2b130e44c7.png)
+![Best Seller](https://user-images.githubusercontent.com/90146483/194680641-25652b9f-f5ee-47ef-a881-cbb951fa8bfb.png)
+![Cart](https://user-images.githubusercontent.com/90146483/194680642-9c6a37c4-91be-4676-be8a-e5f48cd0d24f.png)
+![Dashboard](https://user-images.githubusercontent.com/90146483/194680643-2d0f5d72-6ab0-4583-8033-9396bfde08ed.png)
+![Edit Account](https://user-images.githubusercontent.com/90146483/194680644-d14f3a2c-8fcb-4194-a473-3203fdb2e02e.png)
+![Favorite](https://user-images.githubusercontent.com/90146483/194680645-6bb7f666-009e-40fd-a081-f2de6501847c.png)
+![Forgot pass 1](https://user-images.githubusercontent.com/90146483/194680647-f8ada4bc-8b8c-4ada-b51a-358de2f2e2a2.png)
+
+
+
+# Admin View
+
+![admin](https://user-images.githubusercontent.com/90146483/194680679-1b2a22fc-ea2a-49fd-b7ff-b073ff860dbc.jpeg)
+![Web capture_8-10-2022_6399_sanjay rpme website](https://user-images.githubusercontent.com/90146483/194680685-8a7531f2-9c66-4b60-9977-65b6c52a1209.jpeg)
+![Web capture_8-10-2022_6406_sanjay rpme website](https://user-images.githubusercontent.com/90146483/194680690-13dcb8ed-cd9f-4f47-a163-4b683e90e2f9.jpeg)
+![Web capture_8-10-2022_63952_sanjay rpme website](https://user-images.githubusercontent.com/90146483/194680693-d7a2c611-f1ec-46a0-8717-9069aebe7376.jpeg)
+
+
+
+
+
+
 ##	Definitions, Acronyms and Abbreviations
 
 Term	Description
