@@ -4,30 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Fragments.SavedAddressFragment">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
+        android:layout_height="wrap_content">
 
 
         <androidx.constraintlayout.utils.widget.MotionLabel
             android:layout_width="205dp"
             android:layout_height="205dp"
-            android:layout_marginLeft="-105dp"
+            android:layout_marginStart="-105dp"
             android:layout_marginTop="-70dp"
             android:background="@drawable/ovalshape"
-            android:text="">
-        </androidx.constraintlayout.utils.widget.MotionLabel>
+            android:text=""/>
 
         <androidx.constraintlayout.utils.widget.MotionLabel
             android:layout_width="205dp"
             android:layout_height="205dp"
-            android:layout_marginLeft="-30dp"
+            android:layout_marginStart="-30dp"
             android:layout_marginTop="-135dp"
             android:background="@drawable/ovalshape"
-            android:text=""></androidx.constraintlayout.utils.widget.MotionLabel>
+            android:text=""/>
 
         <TextView
             android:id="@+id/header_title"
@@ -39,9 +36,9 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="verdana"
             android:gravity="center"
-            android:text="Summary"
+            android:text="Address"
             android:textColor="@color/cardview_dark_background"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
 
@@ -57,7 +54,7 @@
             android:background="@drawable/layout_border"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_gravity="center_vertical"
@@ -68,19 +65,22 @@
                     android:id="@+id/delivar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="30dp"
                     android:fontFamily="verdana"
                     android:text="Deliver to :"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textSize="22dp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.466" />
 
                 <Button
+                    android:id="@+id/button"
                     android:layout_width="wrap_content"
+
                     android:layout_height="35dp"
-                    android:layout_marginStart="100dp"
                     android:background="@color/oval_color"
                     android:fontFamily="@font/poppins_bold"
                     android:padding="3dp"
@@ -88,10 +88,13 @@
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-                    android:textSize="14dp" />
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:id="@+id/details"
@@ -108,9 +111,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
                     android:fontFamily="@font/syne"
-                    android:text="Shikat Mahmud"
+                    android:text="Sanjay Kumar Sah"
                     android:textColor="@color/black"
-                    android:textSize="28dp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/uAddress"
@@ -120,7 +123,7 @@
                     android:fontFamily="verdana"
                     android:text="RK Boys Hostel, Rajkot, Gujarat 360020"
                     android:textColor="@color/black"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/uPhone"
@@ -131,7 +134,7 @@
                     android:fontFamily="verdana"
                     android:text="Mobile: +91 8345XXXXXX"
                     android:textColor="@color/black"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
 
             </LinearLayout>

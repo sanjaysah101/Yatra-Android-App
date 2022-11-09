@@ -70,7 +70,7 @@
                 android:id="@+id/totalPriceTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total 110 Rs"
+                android:text="Total 0 Rs"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"

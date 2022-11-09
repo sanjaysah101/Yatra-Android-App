@@ -150,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
                     frameLayout.setVisibility(View.VISIBLE);
                     loadFrag(new AccountFragment());
                     progressBar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
                 }
                 return true;
             }

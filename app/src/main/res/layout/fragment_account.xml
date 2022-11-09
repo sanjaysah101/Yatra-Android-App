@@ -51,12 +51,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/uName"
+                android:id="@+id/userName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Eftakhar Mahmud Shikat"
+                android:text="User's Name"
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text=""
+                android:text="example@gmail.com"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />

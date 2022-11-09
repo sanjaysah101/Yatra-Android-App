@@ -526,7 +526,7 @@
                     android:fontFamily="@font/syne"
                     android:gravity="start"
                     android:padding="0.5dp"
-                    android:text="Mob: +91 83459 82386"
+                    android:text="Mob: +91 98751 66909"
                     android:textColor="@color/black"
                     android:textSize="13sp"
                     android:textStyle="bold" />

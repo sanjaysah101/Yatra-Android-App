@@ -51,7 +51,7 @@ public class AccountFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_account, container, false);
         Button logoutButton = view.findViewById(R.id.logoutButton);
-        TextView uName = view.findViewById(R.id.uName);
+        TextView userName = view.findViewById(R.id.userName);
         TextView userEmail = view.findViewById(R.id.userEmail);
         TextView orders = view.findViewById(R.id.orders);
         TextView favoriteList = view.findViewById(R.id.favoriteList);
@@ -87,7 +87,7 @@ public class AccountFragment extends Fragment {
         savedAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadFrag(new MyCartFragment());
+                loadFrag(new SavedAddressFragment());
             }
         });
 
@@ -132,7 +132,7 @@ public class AccountFragment extends Fragment {
 
                 User user = snapshot.getValue(User.class);
                 if(user != null){
-                    uName.setText(user.getFullName());
+                    userName.setText(user.getFname());
                     userEmail.setText(user.getEmail());
                 }
 
